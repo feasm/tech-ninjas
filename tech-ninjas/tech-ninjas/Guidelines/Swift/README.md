@@ -240,8 +240,8 @@ class ViewModelImpl: ViewModel { init() {}
         }
         
         switch name {
-            case "Red Shirt": 
-                print("Red!") 
+        case "Red Shirt": 
+            print("Red!") 
         }
     }
 
@@ -262,15 +262,15 @@ class ViewModelImpl: ViewModel {
         if name == nil { return }
         
         switch name {
-            case "Red Shirt": print("Red!") 
+        case "Red Shirt": print("Red!") 
         }
     }
 
 }
 ```
 
-### 2.2 Line spaces
-Always put a space before open brackets
+### 2.3 Spaces
+Always put one space before open brackets
 
 ```swift
 // Not Preferred
@@ -283,5 +283,191 @@ protocol ViewModel{
 // Preferred
 protocol ViewModel {
     func getProducts(name: String?)
+}
+```
+
+Never put spaces before double pointers, always put one space after double pointers, except for ternary ifs
+
+```swift
+// Not Preferred
+class ViewController :UIViewController {
+    func getProducts(name : String?) {}
+}
+```
+
+```swift
+// Preferred
+class ViewController: UIViewController {
+    func getProducts(name: String?) {}
+}
+```
+
+Never put spaces before open squares and parentheses
+
+```swift
+// Not Preferred
+class ViewController: UIViewController {
+
+    var products = [Products]()
+    
+    func getProducts (index: Int) -> Product {
+        return products [index]
+    }
+    
+}
+```
+
+```swift
+// Preferred
+class ViewController: UIViewController {
+
+    var products = [Products]()
+    
+    func getProducts(index: Int) -> Product {
+        return products[index]
+    }
+    
+}
+```
+
+Always put one space before and after equals(=)
+
+```swift
+// Not Preferred
+class ViewController: UIViewController {
+
+    var products=[Products]()
+    
+}
+```
+
+```swift
+// Preferred
+class ViewController: UIViewController {
+
+    var products = [Products]()
+    
+}
+```
+
+### 2.4 Tabs
+Always use 1 tab for identation, never spaces
+
+```swift
+// Not Preferred
+protocol ViewModel{
+ func getProducts(name: String?)
+}
+```
+
+```swift
+// Preferred
+protocol ViewModel {
+    func getProducts(name: String?)
+}
+```
+
+## 3. Optionals
+
+### 3.1 Force unwraps
+Never force unwrap variables
+
+```swift
+// Not Preferred
+func print(color: String?) {
+    print(color!)
+}
+```
+
+```swift
+// Preferred
+func print(color: String?) {
+    guard let color = color else { return }
+    print(color)
+}
+
+func print(color: String?) {
+    if let color = color {
+        print(color)
+    }
+}
+
+func print(color: String?) {
+    print(color ?? "No color!")
+}
+```
+
+### 3.2 Force casts
+Never force cast variables
+
+```swift
+// Not Preferred
+func print(age: Int?) {
+    print(age as! Double)
+}
+```
+
+```swift
+// Preferred
+func print(age: Int?) {
+    guard let age = age as? Double else { return }
+    print(age)
+}
+
+func print(age: Int?) {
+    if let age = age as? Double {
+        print(age as! Double)
+    }
+}
+
+func print(age: Int?) {
+    print(age as? Double ?? 0)
+}
+```
+
+## 4. Avoid Retain Cycles
+
+### 4.1 In dependencys
+
+```swift
+// Not Preferred
+class ViewController {
+    var viewModel: ViewModel
+}
+
+class ViewModel {
+    var viewController: ViewController?
+}
+```
+
+```swift
+// Preferred
+class ViewController {
+    var viewModel: ViewModel
+}
+
+class ViewModel {
+    weak var viewController: ViewController?
+}
+```
+
+### 4.2 In closures
+
+```swift
+// Not Preferred
+func getProducts() {
+    service.getProducts { products in
+        // ...
+    }
+}
+```
+
+```swift
+// Preferred
+func getProducts() {
+    service.getProducts { [weak self] products in
+        guard let self = self else { return } // if needed
+        // ...
+    }
 }
 ```
