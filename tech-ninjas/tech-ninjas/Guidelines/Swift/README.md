@@ -218,7 +218,8 @@ class ViewModelImpl: ViewModel {
     // ...
     }
     
-}```
+}
+```
 
 ### 2.2 Line break
 Always break lines after defining new scope, except for single lines in methods, ifs, guards and switch cases
@@ -244,7 +245,8 @@ class ViewModelImpl: ViewModel { init() {}
         }
     }
 
-}```
+}
+```
 
 ```swift
 // Preferred
@@ -264,7 +266,8 @@ class ViewModelImpl: ViewModel {
         }
     }
 
-}```
+}
+```
 
 ### 2.2 Line spaces
 Always put a space before open brackets
