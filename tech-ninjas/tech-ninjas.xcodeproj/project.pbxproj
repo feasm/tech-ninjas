@@ -9,13 +9,23 @@
 /* Begin PBXBuildFile section */
 		AF9DA71828C44AE90004B101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA71728C44AE90004B101 /* AppDelegate.swift */; };
 		AF9DA71A28C44AE90004B101 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA71928C44AE90004B101 /* SceneDelegate.swift */; };
-		AF9DA71C28C44AE90004B101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA71B28C44AE90004B101 /* ViewController.swift */; };
-		AF9DA71F28C44AE90004B101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9DA71D28C44AE90004B101 /* Main.storyboard */; };
 		AF9DA72128C44AEA0004B101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9DA72028C44AEA0004B101 /* Assets.xcassets */; };
 		AF9DA72428C44AEA0004B101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9DA72228C44AEA0004B101 /* LaunchScreen.storyboard */; };
 		AF9DA72F28C44AEB0004B101 /* tech_ninjasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA72E28C44AEB0004B101 /* tech_ninjasTests.swift */; };
 		AF9DA73928C44AEB0004B101 /* tech_ninjasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA73828C44AEB0004B101 /* tech_ninjasUITests.swift */; };
 		AF9DA73B28C44AEB0004B101 /* tech_ninjasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA73A28C44AEB0004B101 /* tech_ninjasUITestsLaunchTests.swift */; };
+		AF9DA74D28C460C30004B101 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA74C28C460C30004B101 /* RxBlocking */; };
+		AF9DA74F28C460C30004B101 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA74E28C460C30004B101 /* RxCocoa */; };
+		AF9DA75128C460C30004B101 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA75028C460C30004B101 /* RxSwift */; };
+		AF9DA75528C4611F0004B101 /* FeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA75428C4611F0004B101 /* FeatureCoordinator.swift */; };
+		AF9DA75728C4618D0004B101 /* FeatureScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA75628C4618D0004B101 /* FeatureScreenViewController.swift */; };
+		AF9DA75D28C51E950004B101 /* TNCore in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA75C28C51E950004B101 /* TNCore */; };
+		AF9DA76028C521840004B101 /* TNUI in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA75F28C521840004B101 /* TNUI */; };
+		AFA9A22928C59D99000EA049 /* UserSelectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9A22828C59D98000EA049 /* UserSelectedViewModel.swift */; };
+		AFA9A22B28C59DAD000EA049 /* UserSelectedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9A22A28C59DAD000EA049 /* UserSelectedCoordinator.swift */; };
+		AFA9A22D28C59DB4000EA049 /* UserSelectedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9A22C28C59DB4000EA049 /* UserSelectedModel.swift */; };
+		AFA9A23028C59DB9000EA049 /* UserSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9A22E28C59DB9000EA049 /* UserSelectedView.swift */; };
+		AFA9A23128C59DB9000EA049 /* UserSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9A22F28C59DB9000EA049 /* UserSelectedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +49,6 @@
 		AF9DA71428C44AE90004B101 /* tech-ninjas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tech-ninjas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9DA71728C44AE90004B101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF9DA71928C44AE90004B101 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AF9DA71B28C44AE90004B101 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AF9DA71E28C44AE90004B101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF9DA72028C44AEA0004B101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF9DA72328C44AEA0004B101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF9DA72528C44AEA0004B101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,7 +57,23 @@
 		AF9DA73428C44AEB0004B101 /* tech-ninjasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tech-ninjasUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9DA73828C44AEB0004B101 /* tech_ninjasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tech_ninjasUITests.swift; sourceTree = "<group>"; };
 		AF9DA73A28C44AEB0004B101 /* tech_ninjasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tech_ninjasUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		AF9DA74828C44B220004B101 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AF9DA75428C4611F0004B101 /* FeatureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCoordinator.swift; sourceTree = "<group>"; };
+		AF9DA75628C4618D0004B101 /* FeatureScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureScreenViewController.swift; sourceTree = "<group>"; };
+		AF9DA75A28C51D870004B101 /* TNCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TNCore; path = packages/TNCore; sourceTree = "<group>"; };
+		AF9DA75E28C5213A0004B101 /* TNUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TNUI; path = packages/TNUI; sourceTree = "<group>"; };
+		AFA9A20E28C58B1D000EA049 /* ViewModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ViewModel; sourceTree = "<group>"; };
+		AFA9A20F28C58B1D000EA049 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Coordinator; sourceTree = "<group>"; };
+		AFA9A21028C58B1D000EA049 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
+		AFA9A21128C58B1D000EA049 /* View */ = {isa = PBXFileReference; lastKnownFileType = folder; path = View; sourceTree = "<group>"; };
+		AFA9A22828C59D98000EA049 /* UserSelectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectedViewModel.swift; sourceTree = "<group>"; };
+		AFA9A22A28C59DAD000EA049 /* UserSelectedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectedCoordinator.swift; sourceTree = "<group>"; };
+		AFA9A22C28C59DB4000EA049 /* UserSelectedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectedModel.swift; sourceTree = "<group>"; };
+		AFA9A22E28C59DB9000EA049 /* UserSelectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectedView.swift; sourceTree = "<group>"; };
+		AFA9A22F28C59DB9000EA049 /* UserSelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectedViewController.swift; sourceTree = "<group>"; };
+		AFA9A23228C59E3C000EA049 /* ViewModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ViewModel; sourceTree = "<group>"; };
+		AFA9A23328C59E3C000EA049 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Coordinator; sourceTree = "<group>"; };
+		AFA9A23428C59E3C000EA049 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
+		AFA9A23528C59E3D000EA049 /* View */ = {isa = PBXFileReference; lastKnownFileType = folder; path = View; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +81,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9DA75128C460C30004B101 /* RxSwift in Frameworks */,
+				AF9DA75D28C51E950004B101 /* TNCore in Frameworks */,
+				AF9DA74F28C460C30004B101 /* RxCocoa in Frameworks */,
+				AF9DA74D28C460C30004B101 /* RxBlocking in Frameworks */,
+				AF9DA76028C521840004B101 /* TNUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,10 +109,12 @@
 		AF9DA70B28C44AE90004B101 = {
 			isa = PBXGroup;
 			children = (
+				AF9DA75928C51D870004B101 /* Packages */,
 				AF9DA71628C44AE90004B101 /* tech-ninjas */,
 				AF9DA72D28C44AEB0004B101 /* tech-ninjasTests */,
 				AF9DA73728C44AEB0004B101 /* tech-ninjasUITests */,
 				AF9DA71528C44AE90004B101 /* Products */,
+				AF9DA75B28C51E950004B101 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,8 +134,6 @@
 				AF9DA74728C44AF60004B101 /* Guidelines */,
 				AF9DA71728C44AE90004B101 /* AppDelegate.swift */,
 				AF9DA71928C44AE90004B101 /* SceneDelegate.swift */,
-				AF9DA71B28C44AE90004B101 /* ViewController.swift */,
-				AF9DA71D28C44AE90004B101 /* Main.storyboard */,
 				AF9DA72028C44AEA0004B101 /* Assets.xcassets */,
 				AF9DA72228C44AEA0004B101 /* LaunchScreen.storyboard */,
 				AF9DA72528C44AEA0004B101 /* Info.plist */,
@@ -133,24 +162,78 @@
 			isa = PBXGroup;
 			children = (
 				AF9DA74A28C44B2B0004B101 /* Archtecture */,
-				AF9DA74928C44B260004B101 /* Swift */,
 			);
 			path = Guidelines;
-			sourceTree = "<group>";
-		};
-		AF9DA74928C44B260004B101 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				AF9DA74828C44B220004B101 /* README.md */,
-			);
-			path = Swift;
 			sourceTree = "<group>";
 		};
 		AF9DA74A28C44B2B0004B101 /* Archtecture */ = {
 			isa = PBXGroup;
 			children = (
+				AF9DA75328C460F40004B101 /* Example */,
 			);
 			path = Archtecture;
+			sourceTree = "<group>";
+		};
+		AF9DA75328C460F40004B101 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				AF9DA75828C464D10004B101 /* Screens */,
+				AF9DA75428C4611F0004B101 /* FeatureCoordinator.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		AF9DA75828C464D10004B101 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AFA9A21F28C59C93000EA049 /* UserSelected */,
+				AFA9A20D28C58B0B000EA049 /* SelectUsers */,
+				AF9DA75628C4618D0004B101 /* FeatureScreenViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		AF9DA75928C51D870004B101 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				AF9DA75A28C51D870004B101 /* TNCore */,
+				AF9DA75E28C5213A0004B101 /* TNUI */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		AF9DA75B28C51E950004B101 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFA9A20D28C58B0B000EA049 /* SelectUsers */ = {
+			isa = PBXGroup;
+			children = (
+				AFA9A20E28C58B1D000EA049 /* ViewModel */,
+				AFA9A20F28C58B1D000EA049 /* Coordinator */,
+				AFA9A21028C58B1D000EA049 /* Model */,
+				AFA9A21128C58B1D000EA049 /* View */,
+			);
+			path = SelectUsers;
+			sourceTree = "<group>";
+		};
+		AFA9A21F28C59C93000EA049 /* UserSelected */ = {
+			isa = PBXGroup;
+			children = (
+				AFA9A22828C59D98000EA049 /* UserSelectedViewModel.swift */,
+				AFA9A22A28C59DAD000EA049 /* UserSelectedCoordinator.swift */,
+				AFA9A22C28C59DB4000EA049 /* UserSelectedModel.swift */,
+				AFA9A22E28C59DB9000EA049 /* UserSelectedView.swift */,
+				AFA9A22F28C59DB9000EA049 /* UserSelectedViewController.swift */,
+				AFA9A23228C59E3C000EA049 /* ViewModel */,
+				AFA9A23328C59E3C000EA049 /* Coordinator */,
+				AFA9A23428C59E3C000EA049 /* Model */,
+				AFA9A23528C59E3D000EA049 /* View */,
+			);
+			path = UserSelected;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +252,13 @@
 			dependencies = (
 			);
 			name = "tech-ninjas";
+			packageProductDependencies = (
+				AF9DA74C28C460C30004B101 /* RxBlocking */,
+				AF9DA74E28C460C30004B101 /* RxCocoa */,
+				AF9DA75028C460C30004B101 /* RxSwift */,
+				AF9DA75C28C51E950004B101 /* TNCore */,
+				AF9DA75F28C521840004B101 /* TNUI */,
+			);
 			productName = "tech-ninjas";
 			productReference = AF9DA71428C44AE90004B101 /* tech-ninjas.app */;
 			productType = "com.apple.product-type.application";
@@ -241,6 +331,9 @@
 				Base,
 			);
 			mainGroup = AF9DA70B28C44AE90004B101;
+			packageReferences = (
+				AF9DA74B28C460C30004B101 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = AF9DA71528C44AE90004B101 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,7 +352,6 @@
 			files = (
 				AF9DA72428C44AEA0004B101 /* LaunchScreen.storyboard in Resources */,
 				AF9DA72128C44AEA0004B101 /* Assets.xcassets in Resources */,
-				AF9DA71F28C44AE90004B101 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,9 +376,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF9DA71C28C44AE90004B101 /* ViewController.swift in Sources */,
+				AFA9A22B28C59DAD000EA049 /* UserSelectedCoordinator.swift in Sources */,
+				AFA9A23128C59DB9000EA049 /* UserSelectedViewController.swift in Sources */,
+				AFA9A22928C59D99000EA049 /* UserSelectedViewModel.swift in Sources */,
 				AF9DA71828C44AE90004B101 /* AppDelegate.swift in Sources */,
+				AFA9A22D28C59DB4000EA049 /* UserSelectedModel.swift in Sources */,
+				AFA9A23028C59DB9000EA049 /* UserSelectedView.swift in Sources */,
+				AF9DA75728C4618D0004B101 /* FeatureScreenViewController.swift in Sources */,
 				AF9DA71A28C44AE90004B101 /* SceneDelegate.swift in Sources */,
+				AF9DA75528C4611F0004B101 /* FeatureCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,14 +421,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF9DA71D28C44AE90004B101 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF9DA71E28C44AE90004B101 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AF9DA72228C44AEA0004B101 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -468,7 +558,6 @@
 				INFOPLIST_FILE = "tech-ninjas/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,7 +585,6 @@
 				INFOPLIST_FILE = "tech-ninjas/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -628,6 +716,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF9DA74B28C460C30004B101 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF9DA74C28C460C30004B101 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF9DA74B28C460C30004B101 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		AF9DA74E28C460C30004B101 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF9DA74B28C460C30004B101 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		AF9DA75028C460C30004B101 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF9DA74B28C460C30004B101 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		AF9DA75C28C51E950004B101 /* TNCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TNCore;
+		};
+		AF9DA75F28C521840004B101 /* TNUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TNUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF9DA70C28C44AE90004B101 /* Project object */;
 }
