@@ -11,7 +11,7 @@ import SwiftUI
 public struct ViewPreview: UIViewRepresentable {
     let viewBuilder: () -> UIView
     
-    init(_ viewBuilder: @escaping () -> UIView) {
+    public init(_ viewBuilder: @escaping () -> UIView) {
         self.viewBuilder = viewBuilder
     }
     

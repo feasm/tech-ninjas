@@ -1,27 +1,22 @@
-//
-// 
-//  NoOneCoordinator.swift
-//  tech-ninjas
-//
-//  Created by Felipe Alexander Da Silva Melo on 05/09/22.
-//
-//
+// ___FILEHEADER___
 
 import Foundation
 import UIKit
 
-final class NoOneCoordinator: Coordinator {
+import TNCore
+
+final class ___VARIABLE_screenName:identifier___Coordinator: Coordinator {
     
     var currentViewController: UIViewController?
     var navigationController: UINavigationController?
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
     }
     
     func start() {
-        let viewModel = NoOneViewModelImpl(input: NoOneViewModelInput())
-        let viewController = NoOneViewController(viewModel: viewModel)
+        let viewModel = ___VARIABLE_screenName:identifier___ViewModelImpl()
+        let viewController = ___VARIABLE_screenName:identifier___ViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: true)
         currentViewController = viewController
     }

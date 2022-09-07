@@ -11,7 +11,7 @@ import SwiftUI
 public struct ViewControllerPreview: UIViewControllerRepresentable {
     let viewControllerBuilder: () -> UIViewController
     
-    init(_ viewControllerBuilder: @escaping () -> UIViewController) {
+    public init(_ viewControllerBuilder: @escaping () -> UIViewController) {
         self.viewControllerBuilder = viewControllerBuilder
     }
     

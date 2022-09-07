@@ -4,55 +4,28 @@
 <dict>
 	<key>Kind</key>
 	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
-	<key>Platforms</key>
-	<array>
-		<string>com.apple.platform.iphoneos</string>
-		<string>com.apple.platform.macosx</string>
-	</array>
+	<key>Identifier</key>
+	<string>com.feasm.mvvm</string>
 	<key>SortOrder</key>
 	<integer>1</integer>
 	<key>Options</key>
 	<array>
 		<dict>
 			<key>Identifier</key>
-			<string>productName</string>
+			<string>screenName</string>
 			<key>Required</key>
 			<true/>
 			<key>Name</key>
-			<string>Module Name:</string>
+			<string>Screen Name:</string>
 			<key>Description</key>
-			<string>The name of the Module</string>
+			<string>The name of the Screen</string>
 			<key>Type</key>
 			<string>text</string>
 			<key>Default</key>
-			<string>Module Name</string>
-			<key>RequiredOptions</key>
-			<dict>
-				<key>classType</key>
-				<array>
-					<string>MVVM</string>
-				</array>
-			</dict>
-		</dict>
-		<dict>
-			<key>Identifier</key>
-			<string>classType</string>
-			<key>Required</key>
-			<true/>
-			<key>Name</key>
-			<string>Class Type:</string>
-			<key>Description</key>
-			<string>The type of classes to create</string>
-			<key>Type</key>
-			<string>popup</string>
-			<key>Default</key>
-			<string>MVVM</string>
-			<key>Values</key>
-			<array>
-				<string>MVVM</string>
-				<string>RxService</string>
-			</array>
+			<string>Screen Name</string>
 		</dict>
 	</array>
+	<key>DefaultCompletionName</key>
+	<string>Feature</string>
 </dict>
 </plist>

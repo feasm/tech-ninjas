@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF5EFE5C28C81AF00011B923 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AF5EFE5B28C81AF00011B923 /* SnapKit */; };
+		AF5EFE6E28C820860011B923 /* SelectUsersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFE6928C820860011B923 /* SelectUsersCoordinator.swift */; };
+		AF5EFE6F28C820860011B923 /* SelectUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFE6A28C820860011B923 /* SelectUsersViewController.swift */; };
+		AF5EFE7028C820860011B923 /* SelectUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFE6B28C820860011B923 /* SelectUsersView.swift */; };
+		AF5EFE7128C820860011B923 /* SelectUsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFE6C28C820860011B923 /* SelectUsersModel.swift */; };
+		AF5EFE7228C820860011B923 /* SelectUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFE6D28C820860011B923 /* SelectUsersViewModel.swift */; };
 		AF9DA71828C44AE90004B101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA71728C44AE90004B101 /* AppDelegate.swift */; };
 		AF9DA71A28C44AE90004B101 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA71928C44AE90004B101 /* SceneDelegate.swift */; };
 		AF9DA72128C44AEA0004B101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9DA72028C44AEA0004B101 /* Assets.xcassets */; };
@@ -17,15 +23,10 @@
 		AF9DA74D28C460C30004B101 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA74C28C460C30004B101 /* RxBlocking */; };
 		AF9DA74F28C460C30004B101 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA74E28C460C30004B101 /* RxCocoa */; };
 		AF9DA75128C460C30004B101 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA75028C460C30004B101 /* RxSwift */; };
-		AF9DA75528C4611F0004B101 /* FeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA75428C4611F0004B101 /* FeatureCoordinator.swift */; };
-		AF9DA75728C4618D0004B101 /* FeatureScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA75628C4618D0004B101 /* FeatureScreenViewController.swift */; };
+		AF9DA75528C4611F0004B101 /* HomeFeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA75428C4611F0004B101 /* HomeFeatureCoordinator.swift */; };
+		AF9DA75728C4618D0004B101 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA75628C4618D0004B101 /* HomeViewController.swift */; };
 		AF9DA75D28C51E950004B101 /* TNCore in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA75C28C51E950004B101 /* TNCore */; };
 		AF9DA76028C521840004B101 /* TNUI in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA75F28C521840004B101 /* TNUI */; };
-		AFA9A22928C59D99000EA049 /* UserSelectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9A22828C59D98000EA049 /* UserSelectedViewModel.swift */; };
-		AFA9A22B28C59DAD000EA049 /* UserSelectedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9A22A28C59DAD000EA049 /* UserSelectedCoordinator.swift */; };
-		AFA9A22D28C59DB4000EA049 /* UserSelectedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9A22C28C59DB4000EA049 /* UserSelectedModel.swift */; };
-		AFA9A23028C59DB9000EA049 /* UserSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9A22E28C59DB9000EA049 /* UserSelectedView.swift */; };
-		AFA9A23128C59DB9000EA049 /* UserSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9A22F28C59DB9000EA049 /* UserSelectedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF5EFE6928C820860011B923 /* SelectUsersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersCoordinator.swift; sourceTree = "<group>"; };
+		AF5EFE6A28C820860011B923 /* SelectUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersViewController.swift; sourceTree = "<group>"; };
+		AF5EFE6B28C820860011B923 /* SelectUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersView.swift; sourceTree = "<group>"; };
+		AF5EFE6C28C820860011B923 /* SelectUsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersModel.swift; sourceTree = "<group>"; };
+		AF5EFE6D28C820860011B923 /* SelectUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersViewModel.swift; sourceTree = "<group>"; };
 		AF9DA71428C44AE90004B101 /* tech-ninjas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tech-ninjas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9DA71728C44AE90004B101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF9DA71928C44AE90004B101 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,23 +63,10 @@
 		AF9DA73428C44AEB0004B101 /* tech-ninjasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tech-ninjasUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9DA73828C44AEB0004B101 /* tech_ninjasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tech_ninjasUITests.swift; sourceTree = "<group>"; };
 		AF9DA73A28C44AEB0004B101 /* tech_ninjasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tech_ninjasUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		AF9DA75428C4611F0004B101 /* FeatureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCoordinator.swift; sourceTree = "<group>"; };
-		AF9DA75628C4618D0004B101 /* FeatureScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureScreenViewController.swift; sourceTree = "<group>"; };
+		AF9DA75428C4611F0004B101 /* HomeFeatureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeatureCoordinator.swift; sourceTree = "<group>"; };
+		AF9DA75628C4618D0004B101 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AF9DA75A28C51D870004B101 /* TNCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TNCore; path = packages/TNCore; sourceTree = "<group>"; };
 		AF9DA75E28C5213A0004B101 /* TNUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TNUI; path = packages/TNUI; sourceTree = "<group>"; };
-		AFA9A20E28C58B1D000EA049 /* ViewModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ViewModel; sourceTree = "<group>"; };
-		AFA9A20F28C58B1D000EA049 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Coordinator; sourceTree = "<group>"; };
-		AFA9A21028C58B1D000EA049 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
-		AFA9A21128C58B1D000EA049 /* View */ = {isa = PBXFileReference; lastKnownFileType = folder; path = View; sourceTree = "<group>"; };
-		AFA9A22828C59D98000EA049 /* UserSelectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectedViewModel.swift; sourceTree = "<group>"; };
-		AFA9A22A28C59DAD000EA049 /* UserSelectedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectedCoordinator.swift; sourceTree = "<group>"; };
-		AFA9A22C28C59DB4000EA049 /* UserSelectedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectedModel.swift; sourceTree = "<group>"; };
-		AFA9A22E28C59DB9000EA049 /* UserSelectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectedView.swift; sourceTree = "<group>"; };
-		AFA9A22F28C59DB9000EA049 /* UserSelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectedViewController.swift; sourceTree = "<group>"; };
-		AFA9A23228C59E3C000EA049 /* ViewModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ViewModel; sourceTree = "<group>"; };
-		AFA9A23328C59E3C000EA049 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Coordinator; sourceTree = "<group>"; };
-		AFA9A23428C59E3C000EA049 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
-		AFA9A23528C59E3D000EA049 /* View */ = {isa = PBXFileReference; lastKnownFileType = folder; path = View; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +77,7 @@
 				AF9DA75128C460C30004B101 /* RxSwift in Frameworks */,
 				AF9DA75D28C51E950004B101 /* TNCore in Frameworks */,
 				AF9DA74F28C460C30004B101 /* RxCocoa in Frameworks */,
+				AF5EFE5C28C81AF00011B923 /* SnapKit in Frameworks */,
 				AF9DA74D28C460C30004B101 /* RxBlocking in Frameworks */,
 				AF9DA76028C521840004B101 /* TNUI in Frameworks */,
 			);
@@ -106,6 +100,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF5EFE5D28C81C890011B923 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AF9DA75428C4611F0004B101 /* HomeFeatureCoordinator.swift */,
+				AF9DA75628C4618D0004B101 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AF5EFE5E28C81CE30011B923 /* SelectUsers */ = {
+			isa = PBXGroup;
+			children = (
+				AF5EFE6928C820860011B923 /* SelectUsersCoordinator.swift */,
+				AF5EFE6A28C820860011B923 /* SelectUsersViewController.swift */,
+				AF5EFE6B28C820860011B923 /* SelectUsersView.swift */,
+				AF5EFE6C28C820860011B923 /* SelectUsersModel.swift */,
+				AF5EFE6D28C820860011B923 /* SelectUsersViewModel.swift */,
+			);
+			path = SelectUsers;
+			sourceTree = "<group>";
+		};
 		AF9DA70B28C44AE90004B101 = {
 			isa = PBXGroup;
 			children = (
@@ -177,20 +192,18 @@
 		AF9DA75328C460F40004B101 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				AF9DA75828C464D10004B101 /* Screens */,
-				AF9DA75428C4611F0004B101 /* FeatureCoordinator.swift */,
+				AF9DA75828C464D10004B101 /* Modules */,
 			);
 			path = Example;
 			sourceTree = "<group>";
 		};
-		AF9DA75828C464D10004B101 /* Screens */ = {
+		AF9DA75828C464D10004B101 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				AFA9A21F28C59C93000EA049 /* UserSelected */,
-				AFA9A20D28C58B0B000EA049 /* SelectUsers */,
-				AF9DA75628C4618D0004B101 /* FeatureScreenViewController.swift */,
+				AF5EFE5E28C81CE30011B923 /* SelectUsers */,
+				AF5EFE5D28C81C890011B923 /* Home */,
 			);
-			path = Screens;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		AF9DA75928C51D870004B101 /* Packages */ = {
@@ -207,33 +220,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AFA9A20D28C58B0B000EA049 /* SelectUsers */ = {
-			isa = PBXGroup;
-			children = (
-				AFA9A20E28C58B1D000EA049 /* ViewModel */,
-				AFA9A20F28C58B1D000EA049 /* Coordinator */,
-				AFA9A21028C58B1D000EA049 /* Model */,
-				AFA9A21128C58B1D000EA049 /* View */,
-			);
-			path = SelectUsers;
-			sourceTree = "<group>";
-		};
-		AFA9A21F28C59C93000EA049 /* UserSelected */ = {
-			isa = PBXGroup;
-			children = (
-				AFA9A22828C59D98000EA049 /* UserSelectedViewModel.swift */,
-				AFA9A22A28C59DAD000EA049 /* UserSelectedCoordinator.swift */,
-				AFA9A22C28C59DB4000EA049 /* UserSelectedModel.swift */,
-				AFA9A22E28C59DB9000EA049 /* UserSelectedView.swift */,
-				AFA9A22F28C59DB9000EA049 /* UserSelectedViewController.swift */,
-				AFA9A23228C59E3C000EA049 /* ViewModel */,
-				AFA9A23328C59E3C000EA049 /* Coordinator */,
-				AFA9A23428C59E3C000EA049 /* Model */,
-				AFA9A23528C59E3D000EA049 /* View */,
-			);
-			path = UserSelected;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +244,7 @@
 				AF9DA75028C460C30004B101 /* RxSwift */,
 				AF9DA75C28C51E950004B101 /* TNCore */,
 				AF9DA75F28C521840004B101 /* TNUI */,
+				AF5EFE5B28C81AF00011B923 /* SnapKit */,
 			);
 			productName = "tech-ninjas";
 			productReference = AF9DA71428C44AE90004B101 /* tech-ninjas.app */;
@@ -333,6 +320,7 @@
 			mainGroup = AF9DA70B28C44AE90004B101;
 			packageReferences = (
 				AF9DA74B28C460C30004B101 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				AF5EFE5A28C81AF00011B923 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = AF9DA71528C44AE90004B101 /* Products */;
 			projectDirPath = "";
@@ -376,15 +364,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA9A22B28C59DAD000EA049 /* UserSelectedCoordinator.swift in Sources */,
-				AFA9A23128C59DB9000EA049 /* UserSelectedViewController.swift in Sources */,
-				AFA9A22928C59D99000EA049 /* UserSelectedViewModel.swift in Sources */,
 				AF9DA71828C44AE90004B101 /* AppDelegate.swift in Sources */,
-				AFA9A22D28C59DB4000EA049 /* UserSelectedModel.swift in Sources */,
-				AFA9A23028C59DB9000EA049 /* UserSelectedView.swift in Sources */,
-				AF9DA75728C4618D0004B101 /* FeatureScreenViewController.swift in Sources */,
+				AF9DA75728C4618D0004B101 /* HomeViewController.swift in Sources */,
 				AF9DA71A28C44AE90004B101 /* SceneDelegate.swift in Sources */,
-				AF9DA75528C4611F0004B101 /* FeatureCoordinator.swift in Sources */,
+				AF5EFE7028C820860011B923 /* SelectUsersView.swift in Sources */,
+				AF5EFE7128C820860011B923 /* SelectUsersModel.swift in Sources */,
+				AF5EFE7228C820860011B923 /* SelectUsersViewModel.swift in Sources */,
+				AF5EFE6F28C820860011B923 /* SelectUsersViewController.swift in Sources */,
+				AF5EFE6E28C820860011B923 /* SelectUsersCoordinator.swift in Sources */,
+				AF9DA75528C4611F0004B101 /* HomeFeatureCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +706,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AF5EFE5A28C81AF00011B923 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		AF9DA74B28C460C30004B101 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -729,6 +725,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AF5EFE5B28C81AF00011B923 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF5EFE5A28C81AF00011B923 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		AF9DA74C28C460C30004B101 /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AF9DA74B28C460C30004B101 /* XCRemoteSwiftPackageReference "RxSwift" */;

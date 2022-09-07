@@ -24,12 +24,14 @@ import UIKit
 
 protocol Coordinator {
     var currentViewController: UIViewController? { get }
+    var navigationController: UINavigationController? { get }
     func start()
 }
 
-final class FeatureCoordinator: Coordinator {
+final class HomeFeatureCoordinator: Coordinator {
     
     var currentViewController: UIViewController?
+    var navigationController: UINavigationController?
     let window: UIWindow
     
     init(window: UIWindow) {
@@ -37,15 +39,22 @@ final class FeatureCoordinator: Coordinator {
     }
     
     func start() {
-        let viewModel = FeatureScreenViewModelImpl(input: FeatureScreenViewModelInput())
-        currentViewController = FeatureScreenViewController(viewModel: viewModel)
+        let viewController = HomeViewController(coordinator: self)
+        navigationController = UINavigationController(rootViewController: viewController)
+        currentViewController = viewController
         
-        window.rootViewController = currentViewController
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
     
 }
 
+extension HomeFeatureCoordinator: HomeCoordinator {
+    func showSelectUsers() {
+        let coordinator = SelectUsersCoordinator(navigationController: navigationController)
+        coordinator.start()
+    }
+}
 
 // SwiftLint - Ok
 // Firebase -> Analytics -> RemoteConfig -> Deploy - Ok

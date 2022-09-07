@@ -1,4 +1,4 @@
-
+// ___FILEHEADER___
 
 import UIKit
 import RxSwift
@@ -7,14 +7,14 @@ import RxCocoa
 import TNCore
 import TNUI
 
-class SelectUsersViewControllerViewController: UIViewController {
+class ___VARIABLE_screenName:identifier___ViewController: UIViewController {
     
-    private let viewModel: SelectUsersViewControllerViewModel
-    private var contentView: SelectUsersViewControllerView?
+    private let viewModel: ___VARIABLE_screenName:identifier___ViewModel
+    private var contentView: ___VARIABLE_screenName:identifier___View?
     
     private let disposeBag = DisposeBag()
     
-    init(viewModel: SelectUsersViewControllerViewModel) {
+    init(viewModel: ___VARIABLE_screenName:identifier___ViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -25,7 +25,7 @@ class SelectUsersViewControllerViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        contentView = SelectUsersViewControllerView()
+        contentView = ___VARIABLE_screenName:identifier___View()
         view = contentView
         view.backgroundColor = .green // testing purposes only
     }

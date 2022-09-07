@@ -1,4 +1,4 @@
-
+// ___FILEHEADER___
 
 import UIKit
 import RxSwift
@@ -7,7 +7,7 @@ import RxCocoa
 import TNCore
 import TNUI
 
-class SelectUsersViewView: UIView {
+class ___VARIABLE_screenName:identifier___View: UIView {
     
     init() {
         super.init(frame: .zero)
@@ -20,7 +20,7 @@ class SelectUsersViewView: UIView {
     
 }
 
-extension SelectUsersViewView: ViewCoded {
+extension ___VARIABLE_screenName:identifier___View: ViewCoded {
     func buildViewHierarchy() {
         
     }
