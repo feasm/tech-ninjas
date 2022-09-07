@@ -21,7 +21,7 @@ class SelectUsersView: UIView {
     
     lazy var searchTextField: TNTextField = {
         let textField = TNTextField()
-        textField.text = "Ronaldo"
+        textField.placeholder = "Enter text..."
         textField.borderStyle = .roundedRect
         
         return textField
@@ -61,7 +61,7 @@ extension SelectUsersView: ViewCoded {
     
     func setupConstraints() {
         searchTextField.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(Constants.margin)
+            make.top.equalTo(safeAreaLayoutGuide).inset(Constants.margin)
             make.leading.equalToSuperview().inset(Constants.margin)
             make.trailing.equalToSuperview().inset(Constants.margin)
             make.height.equalTo(40)

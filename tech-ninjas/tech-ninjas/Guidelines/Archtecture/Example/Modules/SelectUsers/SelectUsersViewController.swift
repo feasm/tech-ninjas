@@ -18,8 +18,10 @@ import TNUI
 // View -> Montar o layout
 class SelectUsersViewController: UIViewController {
     
-    private let viewModel: SelectUsersViewModel
-    private var contentView: SelectUsersView?
+    private var viewModel: SelectUsersViewModel
+    lazy private var contentView: SelectUsersView = {
+        SelectUsersView()
+    }()
     
     private let disposeBag = DisposeBag()
     
@@ -34,7 +36,6 @@ class SelectUsersViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        contentView = SelectUsersView()
         view = contentView
         title = "Select Users"
     }
@@ -45,21 +46,43 @@ class SelectUsersViewController: UIViewController {
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel.getUsers()
+    }
+    
     private func setup() {
         setupTableView()
         setupBindings()
     }
     
     private func setupBindings() {
-        /*
-         viewModel
+        viewModel.setup(
+            SelectUsersViewModelInput(
+                searchText: contentView.searchTextField.rx.text.asObservable()
+            )
+        )
+        
+        viewModel
             .output
-            .onFilter
-            .drive { [weak self] text in
-                // do something with text
-            }
-            .disposed(by: disposeBag)
-         */
+            .users
+            .drive(
+                contentView
+                    .tableView
+                    .rx
+                    .items(cellIdentifier: "UserSummaryViewCell",
+                           cellType: UserSummaryViewCell.self))
+        { _, model, cell in
+            cell.setup(model)
+        }
+        .disposed(by: disposeBag)
+    }
+    
+    private func setupTableView() {
+        let tableView = contentView.tableView
+        tableView.register(UserSummaryViewCell.self, forCellReuseIdentifier: "UserSummaryViewCell")
+//        tableView?.dataSource = self
     }
 
 }
@@ -71,6 +94,10 @@ class UserSummaryViewCell: UITableViewCell {
         
         return view
     }()
+    
+    func setup(_ userModel: UserModel) {
+        userSummaryView.setup(title: userModel.name, description: userModel.description)
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -102,27 +129,24 @@ extension UserSummaryViewCell: ViewCoded {
     }
 }
 
-extension SelectUsersViewController: UITableViewDataSource {
-    private func setupTableView() {
-        let tableView = contentView?.tableView
-        tableView?.register(UserSummaryViewCell.self, forCellReuseIdentifier: "UserSummaryViewCell")
-        tableView?.dataSource = self
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UserSummaryViewCell()
-        
-        return cell
-    }
-}
+//extension SelectUsersViewController: UITableViewDataSource {
+//
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        3
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = UserSummaryViewCell()
+//
+//        return cell
+//    }
+//}
 
 struct SelectUsersViewController_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = SelectUsersViewModelImpl()
+        let service = SelectUsersServiceMock()
+        let viewModel = SelectUsersViewModelImpl(service: service)
         ViewControllerPreview {
             SelectUsersViewController(viewModel: viewModel)
         }

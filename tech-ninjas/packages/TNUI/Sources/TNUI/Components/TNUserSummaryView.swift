@@ -21,14 +21,14 @@ public class TNUserSummaryView: UIView {
         }
     }
     
-    lazy var userImageView: UIImageView = {
+    lazy public var userImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "user_avatar")
         
         return imageView
     }()
     
-    lazy var textStackView: UIStackView = {
+    lazy public var textStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         
@@ -60,6 +60,11 @@ public class TNUserSummaryView: UIView {
     public init() {
         super.init(frame: .zero)
         setupView()
+    }
+    
+    public func setup(title: String, description: String) {
+        titleLabel.text = title
+        descriptionLabel.text = description
     }
     
     required init?(coder: NSCoder) {

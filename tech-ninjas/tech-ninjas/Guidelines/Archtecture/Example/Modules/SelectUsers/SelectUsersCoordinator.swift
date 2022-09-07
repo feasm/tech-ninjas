@@ -20,7 +20,8 @@ final class SelectUsersCoordinator: Coordinator {
     }
     
     func start() {
-        let viewModel = SelectUsersViewModelImpl()
+        let service = SelectUsersServiceMock()
+        let viewModel = SelectUsersViewModelImpl(service: service)
         let viewController = SelectUsersViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: true)
         currentViewController = viewController
