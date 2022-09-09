@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>Identifier</key>
+	<string>com.feasm.mvvm</string>
+	<key>SortOrder</key>
+	<integer>1</integer>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>screenName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Screen Name:</string>
+			<key>Description</key>
+			<string>The name of the Screen</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Default</key>
+			<string>Screen Name</string>
+		</dict>
+	</array>
+	<key>DefaultCompletionName</key>
+	<string>Feature</string>
+</dict>
+</plist>
