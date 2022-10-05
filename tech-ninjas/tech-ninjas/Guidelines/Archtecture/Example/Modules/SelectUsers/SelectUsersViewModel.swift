@@ -19,6 +19,9 @@ protocol SelectUsersViewModel {
     
     func getUsers()
     func filterUsers(text: String)
+    func selectUser(index: Int, isSelected: Bool)
+    
+    func didTapSelectButton()
 }
 
 final class SelectUsersViewModelImpl: SelectUsersViewModel {
@@ -56,40 +59,16 @@ final class SelectUsersViewModelImpl: SelectUsersViewModel {
         didUpdateUsers?()
     }
     
-}
-
-struct UserModel: Decodable {
-    let name: String
-    let description: String
-}
-
-enum NetworkError: Error {
-    case internalServerError
-}
-
-protocol SelectUsersService {
-    func getUsers(completion: @escaping (Result<[UserModel], NetworkError>) -> Void)
-}
-
-final class SelectUsersServiceImpl: SelectUsersService {
-    
-    func getUsers(completion: @escaping (Result<[UserModel], NetworkError>) -> Void) {
-        
+    func selectUser(index: Int, isSelected: Bool) {
+        userModels[index].isSelected = isSelected
     }
     
-}
-
-final class SelectUsersServiceMock: SelectUsersService {
-    
-    func getUsers(completion: @escaping (Result<[UserModel], NetworkError>) -> Void) {
-        completion(.success([
-            .init(name: "Carlinhos", description: "Pai do carlinhozinho"),
-            .init(name: "Minatti", description: "Pai do toddy"),
-            .init(name: "Po", description: "Pai do futuro"),
-            .init(name: "Carlinhozinho", description: "Filho do carlinhos"),
-            .init(name: "Toddy", description: "Filho do minatti"),
-            .init(name: "Futuro", description: "Filho do paulo")
-        ]))
+    func didTapSelectButton() {
+        userModels.forEach { userModel in
+            if userModel.isSelected {
+                print("\(userModel.name) foi selecionado!")
+            }
+        }
     }
     
 }

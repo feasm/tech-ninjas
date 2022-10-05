@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF39AF2428ED3070009A5FA8 /* UserSummaryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AF2328ED3070009A5FA8 /* UserSummaryViewCell.swift */; };
+		AF39AF2728ED3A70009A5FA8 /* SelectUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AF2628ED3A70009A5FA8 /* SelectUsersService.swift */; };
 		AF5EFE5C28C81AF00011B923 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AF5EFE5B28C81AF00011B923 /* SnapKit */; };
 		AF5EFE6E28C820860011B923 /* SelectUsersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFE6928C820860011B923 /* SelectUsersCoordinator.swift */; };
 		AF5EFE6F28C820860011B923 /* SelectUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFE6A28C820860011B923 /* SelectUsersViewController.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		AF39AF2328ED3070009A5FA8 /* UserSummaryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSummaryViewCell.swift; sourceTree = "<group>"; };
+		AF39AF2628ED3A70009A5FA8 /* SelectUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersService.swift; sourceTree = "<group>"; };
 		AF5EFE6928C820860011B923 /* SelectUsersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersCoordinator.swift; sourceTree = "<group>"; };
 		AF5EFE6A28C820860011B923 /* SelectUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersViewController.swift; sourceTree = "<group>"; };
 		AF5EFE6B28C820860011B923 /* SelectUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				AF5EFE6B28C820860011B923 /* SelectUsersView.swift */,
 				AF5EFE6C28C820860011B923 /* SelectUsersModel.swift */,
 				AF5EFE6D28C820860011B923 /* SelectUsersViewModel.swift */,
+				AF39AF2628ED3A70009A5FA8 /* SelectUsersService.swift */,
 			);
 			path = SelectUsers;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				AF9DA71828C44AE90004B101 /* AppDelegate.swift in Sources */,
 				AF9DA75728C4618D0004B101 /* HomeViewController.swift in Sources */,
 				AF9DA71A28C44AE90004B101 /* SceneDelegate.swift in Sources */,
+				AF39AF2728ED3A70009A5FA8 /* SelectUsersService.swift in Sources */,
 				AF5EFE7028C820860011B923 /* SelectUsersView.swift in Sources */,
 				AF39AF2428ED3070009A5FA8 /* UserSummaryViewCell.swift in Sources */,
 				AF5EFE7128C820860011B923 /* SelectUsersModel.swift in Sources */,

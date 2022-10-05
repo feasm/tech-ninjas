@@ -56,23 +56,28 @@ class SelectUsersViewController: UIViewController {
         }
         
         contentView.searchTextField.addTarget(self, action: #selector(onUpdateSearchText), for: .editingChanged)
-    }
-    
-    private func setupTableView() {
-        let tableView = contentView.tableView
-        tableView.register(UserSummaryViewCell.self, forCellReuseIdentifier: "UserSummaryViewCell")
-        tableView.dataSource = self
+        contentView.selectButton.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
     }
     
     @objc private func onUpdateSearchText() {
         let searchText = contentView.searchTextField.text ?? ""
         viewModel.filterUsers(text: searchText)
     }
+    
+    @objc private func onTapButton() {
+        viewModel.didTapSelectButton()
+    }
 
 }
 
 extension SelectUsersViewController: UITableViewDataSource {
 
+    private func setupTableView() {
+        let tableView = contentView.tableView
+        tableView.register(UserSummaryViewCell.self, forCellReuseIdentifier: "UserSummaryViewCell")
+        tableView.dataSource = self
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.filteredUserModels.count
     }
@@ -80,7 +85,8 @@ extension SelectUsersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UserSummaryViewCell()
         let model = viewModel.filteredUserModels[indexPath.row]
-        cell.setup(model)
+        cell.setup(model, index: indexPath.row)
+        cell.userSummaryView.delegate = self
 
         return cell
     }
@@ -88,7 +94,7 @@ extension SelectUsersViewController: UITableViewDataSource {
 
 extension SelectUsersViewController: TNUserSummaryViewDelegate {
     func didUpdateSwitch(index: Int, value: Bool) {
-        
+        viewModel.selectUser(index: index, isSelected: value)
     }
 }
 
