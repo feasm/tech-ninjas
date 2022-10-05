@@ -1,34 +1,35 @@
 // ___FILEHEADER___
 
 import UIKit
-import RxSwift
-import RxCocoa
 
 import TNCore
 import TNUI
 
-struct ___VARIABLE_screenName:identifier___ViewModelInput {
-    
-}
-
-struct ___VARIABLE_screenName:identifier___ViewModelOutput {
-    
-}
-
 protocol ___VARIABLE_screenName:identifier___ViewModel {
-    var input: ___VARIABLE_screenName:identifier___ViewModelInput? { get }
-    var output: ___VARIABLE_screenName:identifier___ViewModelOutput? { get }
+    func getUsers()
 }
 
 final class ___VARIABLE_screenName:identifier___ViewModelImpl: ___VARIABLE_screenName:identifier___ViewModel {
+
+    private let service: ___VARIABLE_screenName:identifier___Service
+    private var userModels = [___VARIABLE_screenName:identifier___Model]()
     
-    var input: ___VARIABLE_screenName:identifier___ViewModelInput?
-    var output: ___VARIABLE_screenName:identifier___ViewModelOutput?
+    init(service: ___VARIABLE_screenName:identifier___Service) {
+        self.service = service
+    }
     
-    let disposeBag = DisposeBag()
-    
-    init() {
-        
+    func getUsers() {
+        service.getUsers { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let userModels):
+                self.userModels = userModels
+
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
 }

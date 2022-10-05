@@ -19,8 +19,8 @@ class UserSummaryViewCell: UITableViewCell {
         return view
     }()
     
-    func setup(_ userModel: UserModel) {
-        userSummaryView.setup(title: userModel.name, description: userModel.description)
+    func setup(_ userModel: UserModel, index: Int) {
+        userSummaryView.setup(title: userModel.name, description: userModel.description, index: index)
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

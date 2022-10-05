@@ -1,0 +1,6 @@
+framework module TNAuth {
+  umbrella header "TNAuth-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 import SwiftUI
 
 import TNCore
@@ -15,7 +13,7 @@ import TNUI
 
 class SelectUsersView: UIView {
     
-    struct Constants {
+    private struct Constants {
         static let margin: CGFloat = 24
     }
     
@@ -86,10 +84,10 @@ extension SelectUsersView: ViewCoded {
     }
 }
 
-struct SelectUsersView_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewPreview {
-            SelectUsersView()
-        }
-    }
-}
+//struct SelectUsersView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ViewPreview {
+//            SelectUsersView()
+//        }
+//    }
+//}

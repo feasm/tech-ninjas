@@ -15,7 +15,8 @@ final class ___VARIABLE_screenName:identifier___Coordinator: Coordinator {
     }
     
     func start() {
-        let viewModel = ___VARIABLE_screenName:identifier___ViewModelImpl()
+        let service = ___VARIABLE_screenName:identifier___ServiceMock()
+        let viewModel = ___VARIABLE_screenName:identifier___ViewModelImpl(service: service)
         let viewController = ___VARIABLE_screenName:identifier___ViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: true)
         currentViewController = viewController

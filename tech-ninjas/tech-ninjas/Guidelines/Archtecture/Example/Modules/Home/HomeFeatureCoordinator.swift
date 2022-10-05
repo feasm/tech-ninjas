@@ -8,30 +8,16 @@
 import Foundation
 import UIKit
 
-// RxSwift
-// SwiftLint
-// SnapKit
-// Firebase -> Analytics -> RemoteConfig -> Deploy
-// MongoDB -> Dados
-// Moya -> Network layer
-
-// Module -> Features -> Conjunto de telas que entregam juntas um valor -> Independentes
-// Shares libraries -> São códigos que precisarão ser executados em todo o projeto
-// TNUI -> Componentes e definições de layout
-// TNCore -> Formatação de data, máscara de input, Coordinator, ViewCode
-// TNAnalytics -> Facade que implementa o FirebaseAnalytics
-// TNNetworking -> Facade pro Moya
-
-protocol Coordinator {
+protocol ProtocolCoordinator {
     var currentViewController: UIViewController? { get }
     var navigationController: UINavigationController? { get }
     func start()
 }
 
-final class HomeFeatureCoordinator: Coordinator {
+final class HomeFeatureCoordinator: ProtocolCoordinator {
     
-    var currentViewController: UIViewController?
-    var navigationController: UINavigationController?
+    public var currentViewController: UIViewController?
+    public var navigationController: UINavigationController?
     let window: UIWindow
     
     init(window: UIWindow) {

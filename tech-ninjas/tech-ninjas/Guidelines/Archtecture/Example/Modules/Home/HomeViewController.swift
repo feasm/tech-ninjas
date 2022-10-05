@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 import SnapKit
 import SwiftUI
 
@@ -29,7 +27,6 @@ class HomeViewController: UIViewController {
     }() //@autoclosure
     
     private let coordinator: HomeCoordinator
-    private let disposeBag = DisposeBag()
     
     init(coordinator: HomeCoordinator) {
         self.coordinator = coordinator
@@ -59,34 +56,23 @@ class HomeViewController: UIViewController {
             make.trailing.equalToSuperview().inset(24)
             make.center.equalToSuperview()
         }
-        
-        selectUsersButton
-            .rx
-            .tap
-            .bind { [weak self] _ in
-                self?.coordinator.showSelectUsers()
-            }
-            .disposed(by: disposeBag)
+    
+    }
+    
+    @objc func tapButton() {
+        coordinator.showSelectUsers()
     }
     
     private func setupBindings() {
-        /*
-         viewModel
-            .output
-            .onFilter
-            .drive { [weak self] text in
-                // do something with text
-            }
-            .disposed(by: disposeBag)
-         */
+        selectUsersButton.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
     }
 
 }
 
-struct FeatureScreenViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewControllerPreview {
-            HomeViewController(coordinator: HomeFeatureCoordinator(window: UIWindow(frame: .zero)))
-        }
-    }
-}
+//struct FeatureScreenViewController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ViewControllerPreview {
+//            HomeViewController(coordinator: HomeFeatureCoordinator(window: UIWindow(frame: .zero)))
+//        }
+//    }
+//}
