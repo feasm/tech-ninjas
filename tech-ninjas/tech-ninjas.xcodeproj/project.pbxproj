@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF39AF2428ED3070009A5FA8 /* UserSummaryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AF2328ED3070009A5FA8 /* UserSummaryViewCell.swift */; };
 		AF5EFE5C28C81AF00011B923 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AF5EFE5B28C81AF00011B923 /* SnapKit */; };
 		AF5EFE6E28C820860011B923 /* SelectUsersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFE6928C820860011B923 /* SelectUsersCoordinator.swift */; };
 		AF5EFE6F28C820860011B923 /* SelectUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFE6A28C820860011B923 /* SelectUsersViewController.swift */; };
@@ -25,8 +26,8 @@
 		AF9DA75128C460C30004B101 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA75028C460C30004B101 /* RxSwift */; };
 		AF9DA75528C4611F0004B101 /* HomeFeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA75428C4611F0004B101 /* HomeFeatureCoordinator.swift */; };
 		AF9DA75728C4618D0004B101 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DA75628C4618D0004B101 /* HomeViewController.swift */; };
-		AF9DA75D28C51E950004B101 /* TNCore in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA75C28C51E950004B101 /* TNCore */; };
-		AF9DA76028C521840004B101 /* TNUI in Frameworks */ = {isa = PBXBuildFile; productRef = AF9DA75F28C521840004B101 /* TNUI */; };
+		AFC2CCAF28ED27F60015F066 /* TNCore in Frameworks */ = {isa = PBXBuildFile; productRef = AFC2CCAE28ED27F60015F066 /* TNCore */; };
+		AFC2CCB128ED27F60015F066 /* TNUI in Frameworks */ = {isa = PBXBuildFile; productRef = AFC2CCB028ED27F60015F066 /* TNUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF39AF2328ED3070009A5FA8 /* UserSummaryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSummaryViewCell.swift; sourceTree = "<group>"; };
 		AF5EFE6928C820860011B923 /* SelectUsersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersCoordinator.swift; sourceTree = "<group>"; };
 		AF5EFE6A28C820860011B923 /* SelectUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersViewController.swift; sourceTree = "<group>"; };
 		AF5EFE6B28C820860011B923 /* SelectUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersView.swift; sourceTree = "<group>"; };
@@ -74,12 +76,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC2CCB128ED27F60015F066 /* TNUI in Frameworks */,
+				AFC2CCAF28ED27F60015F066 /* TNCore in Frameworks */,
 				AF9DA75128C460C30004B101 /* RxSwift in Frameworks */,
-				AF9DA75D28C51E950004B101 /* TNCore in Frameworks */,
 				AF9DA74F28C460C30004B101 /* RxCocoa in Frameworks */,
 				AF5EFE5C28C81AF00011B923 /* SnapKit in Frameworks */,
 				AF9DA74D28C460C30004B101 /* RxBlocking in Frameworks */,
-				AF9DA76028C521840004B101 /* TNUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF39AF2228ED3044009A5FA8 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				AF39AF2328ED3070009A5FA8 /* UserSummaryViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		AF5EFE5D28C81C890011B923 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		AF5EFE5E28C81CE30011B923 /* SelectUsers */ = {
 			isa = PBXGroup;
 			children = (
+				AF39AF2228ED3044009A5FA8 /* cells */,
 				AF5EFE6928C820860011B923 /* SelectUsersCoordinator.swift */,
 				AF5EFE6A28C820860011B923 /* SelectUsersViewController.swift */,
 				AF5EFE6B28C820860011B923 /* SelectUsersView.swift */,
@@ -229,8 +240,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF9DA73E28C44AEB0004B101 /* Build configuration list for PBXNativeTarget "tech-ninjas" */;
 			buildPhases = (
-				AF9DA71028C44AE90004B101 /* Sources */,
 				AF9DA71128C44AE90004B101 /* Frameworks */,
+				AF9DA71028C44AE90004B101 /* Sources */,
 				AF9DA71228C44AE90004B101 /* Resources */,
 			);
 			buildRules = (
@@ -242,9 +253,9 @@
 				AF9DA74C28C460C30004B101 /* RxBlocking */,
 				AF9DA74E28C460C30004B101 /* RxCocoa */,
 				AF9DA75028C460C30004B101 /* RxSwift */,
-				AF9DA75C28C51E950004B101 /* TNCore */,
-				AF9DA75F28C521840004B101 /* TNUI */,
 				AF5EFE5B28C81AF00011B923 /* SnapKit */,
+				AFC2CCAE28ED27F60015F066 /* TNCore */,
+				AFC2CCB028ED27F60015F066 /* TNUI */,
 			);
 			productName = "tech-ninjas";
 			productReference = AF9DA71428C44AE90004B101 /* tech-ninjas.app */;
@@ -368,6 +379,7 @@
 				AF9DA75728C4618D0004B101 /* HomeViewController.swift in Sources */,
 				AF9DA71A28C44AE90004B101 /* SceneDelegate.swift in Sources */,
 				AF5EFE7028C820860011B923 /* SelectUsersView.swift in Sources */,
+				AF39AF2428ED3070009A5FA8 /* UserSummaryViewCell.swift in Sources */,
 				AF5EFE7128C820860011B923 /* SelectUsersModel.swift in Sources */,
 				AF5EFE7228C820860011B923 /* SelectUsersViewModel.swift in Sources */,
 				AF5EFE6F28C820860011B923 /* SelectUsersViewController.swift in Sources */,
@@ -745,11 +757,11 @@
 			package = AF9DA74B28C460C30004B101 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		AF9DA75C28C51E950004B101 /* TNCore */ = {
+		AFC2CCAE28ED27F60015F066 /* TNCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TNCore;
 		};
-		AF9DA75F28C521840004B101 /* TNUI */ = {
+		AFC2CCB028ED27F60015F066 /* TNUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TNUI;
 		};
