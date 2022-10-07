@@ -10,6 +10,10 @@ import SnapKit
 
 import TNCore
 
+public protocol TNUserSummaryViewDelegate {
+    func didUpdateSwitch(index: Int, value: Bool)
+}
+
 public class TNUserSummaryView: UIView {
     
     struct Constants {
@@ -57,18 +61,32 @@ public class TNUserSummaryView: UIView {
         return selectSwitch
     }()
     
+    public var delegate: TNUserSummaryViewDelegate?
+    
+    private var index: Int = 0
+    
     public init() {
         super.init(frame: .zero)
         setupView()
+        setupBindings()
     }
     
-    public func setup(title: String, description: String) {
+    public func setup(title: String, description: String, index: Int) {
         titleLabel.text = title
         descriptionLabel.text = description
+        self.index = index
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupBindings() {
+        selectSwitch.addTarget(self, action: #selector(didUpdateSwitch), for: .valueChanged)
+    }
+    
+    @objc private func didUpdateSwitch() {
+        delegate?.didUpdateSwitch(index: index, value: selectSwitch.isOn)
     }
     
 }
@@ -87,19 +105,19 @@ extension TNUserSummaryView: ViewCoded {
         snp.makeConstraints { make in
             make.height.equalTo(Constants.height)
         }
-        
+
         userImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(Constants.margin)
             make.leading.equalToSuperview().inset(Constants.margin)
             make.bottom.equalToSuperview().inset(Constants.margin)
             make.width.equalTo(userImageView.snp.height)
         }
-        
+
         textStackView.snp.makeConstraints { make in
             make.centerY.equalTo(userImageView.snp.centerY)
             make.leading.equalTo(userImageView.snp.trailing).offset(10)
         }
-        
+
         selectSwitch.snp.makeConstraints { make in
             make.trailing.equalToSuperview().inset(Constants.margin)
             make.centerY.equalTo(userImageView.snp.centerY)

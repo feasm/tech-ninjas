@@ -6,24 +6,17 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 import SwiftUI
 
 import TNCore
 import TNUI
 
-// View segregada em duas camadas
-// Controller -> Gerenciar inputs e outputs do usuário
-// View -> Montar o layout
 class SelectUsersViewController: UIViewController {
     
     private var viewModel: SelectUsersViewModel
     lazy private var contentView: SelectUsersView = {
         SelectUsersView()
     }()
-    
-    private let disposeBag = DisposeBag()
     
     init(viewModel: SelectUsersViewModel) {
         self.viewModel = viewModel
@@ -58,90 +51,52 @@ class SelectUsersViewController: UIViewController {
     }
     
     private func setupBindings() {
-        viewModel.setup(
-            SelectUsersViewModelInput(
-                searchText: contentView.searchTextField.rx.text.asObservable()
-            )
-        )
-        
-        viewModel
-            .output
-            .users
-            .drive(
-                contentView
-                    .tableView
-                    .rx
-                    .items(cellIdentifier: "UserSummaryViewCell",
-                           cellType: UserSummaryViewCell.self))
-        { _, model, cell in
-            cell.setup(model)
+        viewModel.didUpdateUsers = { [weak self] in
+            self?.contentView.tableView.reloadData()
         }
-        .disposed(by: disposeBag)
+        
+        contentView.searchTextField.addTarget(self, action: #selector(onUpdateSearchText), for: .editingChanged)
+        contentView.selectButton.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
     }
     
+    @objc private func onUpdateSearchText() {
+        let searchText = contentView.searchTextField.text ?? ""
+        viewModel.filterUsers(text: searchText)
+    }
+    
+    @objc private func onTapButton() {
+        viewModel.didTapSelectButton()
+    }
+
+}
+
+extension SelectUsersViewController: UITableViewDataSource {
+
     private func setupTableView() {
         let tableView = contentView.tableView
         tableView.register(UserSummaryViewCell.self, forCellReuseIdentifier: "UserSummaryViewCell")
-//        tableView?.dataSource = self
+        tableView.dataSource = self
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.filteredUserModels.count
     }
 
-}
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UserSummaryViewCell()
+        let model = viewModel.filteredUserModels[indexPath.row]
+        cell.setup(model, index: indexPath.row)
+        cell.userSummaryView.delegate = self
 
-class UserSummaryViewCell: UITableViewCell {
-    
-    lazy var userSummaryView: TNUserSummaryView = {
-        let view = TNUserSummaryView()
-        
-        return view
-    }()
-    
-    func setup(_ userModel: UserModel) {
-        userSummaryView.setup(title: userModel.name, description: userModel.description)
-    }
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupView()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-}
-
-extension UserSummaryViewCell: ViewCoded {
-    func buildViewHierarchy() {
-        addSubview(userSummaryView)
-    }
-    
-    func setupConstraints() {
-        userSummaryView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
-        }
-    }
-    
-    func addAdditionalConfiguration() {
-        
+        return cell
     }
 }
 
-//extension SelectUsersViewController: UITableViewDataSource {
-//
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        3
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UserSummaryViewCell()
-//
-//        return cell
-//    }
-//}
+extension SelectUsersViewController: TNUserSummaryViewDelegate {
+    func didUpdateSwitch(index: Int, value: Bool) {
+        viewModel.selectUser(index: index, isSelected: value)
+    }
+}
 
 struct SelectUsersViewController_Previews: PreviewProvider {
     static var previews: some View {

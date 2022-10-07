@@ -1,11 +1,16 @@
-// ___FILEHEADER___
+// 
+//  RegisterNameCoordinator.swift
+//  tech-ninjas
+//
+//  Created by Gustavo Minatti on 06/10/22.
+//
 
 import Foundation
 import UIKit
 
 import TNCore
 
-final class ___VARIABLE_screenName:identifier___Coordinator: Coordinator {
+final class RegisterNameCoordinator: Coordinator {
     
     var currentViewController: UIViewController?
     var navigationController: UINavigationController?
@@ -15,9 +20,9 @@ final class ___VARIABLE_screenName:identifier___Coordinator: Coordinator {
     }
     
     func start() {
-        let service = ___VARIABLE_screenName:identifier___ServiceMock()
-        let viewModel = ___VARIABLE_screenName:identifier___ViewModelImpl(service: service)
-        let viewController = ___VARIABLE_screenName:identifier___ViewController(viewModel: viewModel)
+        let service = RegisterNameServiceMock()
+        let viewModel = RegisterNameViewModelImpl(service: service)
+        let viewController = RegisterNameViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: true)
         currentViewController = viewController
     }
