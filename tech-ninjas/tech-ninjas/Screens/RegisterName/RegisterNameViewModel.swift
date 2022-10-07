@@ -1,20 +1,25 @@
-// ___FILEHEADER___
+// 
+//  RegisterNameViewModel.swift
+//  tech-ninjas
+//
+//  Created by Gustavo Minatti on 06/10/22.
+//
 
 import UIKit
 
 import TNCore
 import TNUI
 
-protocol ___VARIABLE_screenName:identifier___ViewModel {
+protocol RegisterNameViewModel {
     func getUsers()
 }
 
-final class ___VARIABLE_screenName:identifier___ViewModelImpl: ___VARIABLE_screenName:identifier___ViewModel {
+final class RegisterNameViewModelImpl: RegisterNameViewModel {
 
-    private let service: ___VARIABLE_screenName:identifier___Service
-    private var userModels = [___VARIABLE_screenName:identifier___Model]()
+    private let service: RegisterNameService
+    private var userModels = [RegisterNameModel]()
     
-    init(service: ___VARIABLE_screenName:identifier___Service) {
+    init(service: RegisterNameService) {
         self.service = service
     }
     

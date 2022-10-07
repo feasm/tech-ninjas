@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DA1BF7528EF7D23006E500C /* RegisterNameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1BF6F28EF7D23006E500C /* RegisterNameCoordinator.swift */; };
+		8DA1BF7628EF7D23006E500C /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1BF7028EF7D23006E500C /* RegisterNameViewController.swift */; };
+		8DA1BF7728EF7D23006E500C /* RegisterNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1BF7128EF7D23006E500C /* RegisterNameView.swift */; };
+		8DA1BF7828EF7D23006E500C /* RegisterNameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1BF7228EF7D23006E500C /* RegisterNameModel.swift */; };
+		8DA1BF7928EF7D23006E500C /* RegisterNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1BF7328EF7D23006E500C /* RegisterNameViewModel.swift */; };
+		8DA1BF7A28EF7D23006E500C /* RegisterNameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1BF7428EF7D23006E500C /* RegisterNameService.swift */; };
 		AF39AF2428ED3070009A5FA8 /* UserSummaryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AF2328ED3070009A5FA8 /* UserSummaryViewCell.swift */; };
 		AF39AF2728ED3A70009A5FA8 /* SelectUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39AF2628ED3A70009A5FA8 /* SelectUsersService.swift */; };
 		AF5EFE5C28C81AF00011B923 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AF5EFE5B28C81AF00011B923 /* SnapKit */; };
@@ -49,6 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8DA1BF6F28EF7D23006E500C /* RegisterNameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameCoordinator.swift; sourceTree = "<group>"; };
+		8DA1BF7028EF7D23006E500C /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
+		8DA1BF7128EF7D23006E500C /* RegisterNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameView.swift; sourceTree = "<group>"; };
+		8DA1BF7228EF7D23006E500C /* RegisterNameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameModel.swift; sourceTree = "<group>"; };
+		8DA1BF7328EF7D23006E500C /* RegisterNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewModel.swift; sourceTree = "<group>"; };
+		8DA1BF7428EF7D23006E500C /* RegisterNameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameService.swift; sourceTree = "<group>"; };
 		AF39AF2328ED3070009A5FA8 /* UserSummaryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSummaryViewCell.swift; sourceTree = "<group>"; };
 		AF39AF2628ED3A70009A5FA8 /* SelectUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersService.swift; sourceTree = "<group>"; };
 		AF5EFE6928C820860011B923 /* SelectUsersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersCoordinator.swift; sourceTree = "<group>"; };
@@ -104,6 +116,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DA1BF6D28EF5BB3006E500C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8DA1BF7B28EFA836006E500C /* Teste */,
+				8DA1BF6E28EF7D04006E500C /* RegisterName */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8DA1BF6E28EF7D04006E500C /* RegisterName */ = {
+			isa = PBXGroup;
+			children = (
+				8DA1BF6F28EF7D23006E500C /* RegisterNameCoordinator.swift */,
+				8DA1BF7028EF7D23006E500C /* RegisterNameViewController.swift */,
+				8DA1BF7128EF7D23006E500C /* RegisterNameView.swift */,
+				8DA1BF7228EF7D23006E500C /* RegisterNameModel.swift */,
+				8DA1BF7328EF7D23006E500C /* RegisterNameViewModel.swift */,
+				8DA1BF7428EF7D23006E500C /* RegisterNameService.swift */,
+			);
+			path = RegisterName;
+			sourceTree = "<group>";
+		};
+		8DA1BF7B28EFA836006E500C /* Teste */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Teste;
+			sourceTree = "<group>";
+		};
 		AF39AF2228ED3044009A5FA8 /* cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +201,7 @@
 		AF9DA71628C44AE90004B101 /* tech-ninjas */ = {
 			isa = PBXGroup;
 			children = (
+				8DA1BF6D28EF5BB3006E500C /* Screens */,
 				AF9DA74728C44AF60004B101 /* Guidelines */,
 				AF9DA71728C44AE90004B101 /* AppDelegate.swift */,
 				AF9DA71928C44AE90004B101 /* SceneDelegate.swift */,
@@ -378,12 +420,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DA1BF7828EF7D23006E500C /* RegisterNameModel.swift in Sources */,
 				AF9DA71828C44AE90004B101 /* AppDelegate.swift in Sources */,
 				AF9DA75728C4618D0004B101 /* HomeViewController.swift in Sources */,
+				8DA1BF7728EF7D23006E500C /* RegisterNameView.swift in Sources */,
 				AF9DA71A28C44AE90004B101 /* SceneDelegate.swift in Sources */,
+				8DA1BF7628EF7D23006E500C /* RegisterNameViewController.swift in Sources */,
 				AF39AF2728ED3A70009A5FA8 /* SelectUsersService.swift in Sources */,
 				AF5EFE7028C820860011B923 /* SelectUsersView.swift in Sources */,
+				8DA1BF7A28EF7D23006E500C /* RegisterNameService.swift in Sources */,
+				8DA1BF7928EF7D23006E500C /* RegisterNameViewModel.swift in Sources */,
 				AF39AF2428ED3070009A5FA8 /* UserSummaryViewCell.swift in Sources */,
+				8DA1BF7528EF7D23006E500C /* RegisterNameCoordinator.swift in Sources */,
 				AF5EFE7128C820860011B923 /* SelectUsersModel.swift in Sources */,
 				AF5EFE7228C820860011B923 /* SelectUsersViewModel.swift in Sources */,
 				AF5EFE6F28C820860011B923 /* SelectUsersViewController.swift in Sources */,

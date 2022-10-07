@@ -16,6 +16,18 @@ public extension UIColor {
         UIColor(red: 188, green: 209, blue: 246)
     }
     
+    static var errorLabel: UIColor {
+        UIColor(red: 222, green: 59, blue: 59)
+    }
+    
+    static var errorTextField: UIColor {
+        UIColor(red: 253, green: 242, blue: 242)
+    }
+    
+    static var registerTextField: UIColor {
+        UIColor(red: 243, green: 244, blue: 246)
+    }
+
     convenience init(red: CGFloat, green: CGFloat, blue: CGFloat) {
         self.init(red: red/255, green: green/255, blue: blue/255, alpha: 1)
     }

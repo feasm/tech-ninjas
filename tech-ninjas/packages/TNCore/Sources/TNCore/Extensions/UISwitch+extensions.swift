@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  UISwitch+extensions.swift
 //  
 //
 //  Created by Felipe Alexander Da Silva Melo on 06/09/22.
