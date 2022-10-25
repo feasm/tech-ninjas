@@ -1,0 +1,38 @@
+PODS:
+  - SnapKit (5.6.0)
+  - TNAuthn (0.1.0):
+    - SnapKit
+    - TNCore
+    - TNUI
+  - TNCore (0.1.0)
+  - TNUI (0.1.0):
+    - SnapKit
+    - TNCore
+
+DEPENDENCIES:
+  - SnapKit
+  - TNAuthn (from `./Development Pods/TNAuthn`)
+  - TNCore (from `./Development Pods/TNCore`)
+  - TNUI (from `./Development Pods/TNUI`)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  TNAuthn:
+    :path: "./Development Pods/TNAuthn"
+  TNCore:
+    :path: "./Development Pods/TNCore"
+  TNUI:
+    :path: "./Development Pods/TNUI"
+
+SPEC CHECKSUMS:
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  TNAuthn: acef802860399c41a3fe1242a638592873e2d447
+  TNCore: 1589d3a0731108ed8ad69c6d895e6f25947c69b5
+  TNUI: 16a5a36ac8e69e014231a086be4c27b73ac6f87d
+
+PODFILE CHECKSUM: 813ad8566af9de35d61141832db814420792e34c
+
+COCOAPODS: 1.11.3

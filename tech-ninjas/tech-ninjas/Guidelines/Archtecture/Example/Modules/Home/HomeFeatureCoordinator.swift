@@ -56,7 +56,7 @@ final class HomeFeatureCoordinator: Coordinator {
 
 extension HomeFeatureCoordinator: HomeCoordinator {
     func showSelectUsers() {
-        let coordinator = SelectUsersCoordinator(navigationController: navigationController)
+        let coordinator = LoginCoordinator(navigationController: navigationController)
         coordinator.start()
     }
 }

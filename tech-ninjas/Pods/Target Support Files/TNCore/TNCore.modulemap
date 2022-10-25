@@ -1,0 +1,6 @@
+framework module TNCore {
+  umbrella header "TNCore-umbrella.h"
+
+  export *
+  module * { export * }
+}

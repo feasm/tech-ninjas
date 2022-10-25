@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'tech-ninjas' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'SnapKit'
+  pod 'TNUI', :path => './Development Pods/TNUI'
+  pod 'TNCore', :path => './Development Pods/TNCore'
+  pod 'TNAuthn', :path => './Development Pods/TNAuthn'
+
+  # Pods for tech-ninjas
+
+  target 'tech-ninjasTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'tech-ninjasUITests' do
+    # Pods for testing
+  end
+
+end

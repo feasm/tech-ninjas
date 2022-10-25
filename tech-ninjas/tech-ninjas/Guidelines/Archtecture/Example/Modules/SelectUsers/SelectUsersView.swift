@@ -13,7 +13,7 @@ import TNUI
 
 class SelectUsersView: UIView {
     
-    struct Constants {
+    private struct Constants {
         static let margin: CGFloat = 24
     }
     

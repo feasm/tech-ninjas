@@ -15,13 +15,12 @@ import TNUI
 class RegisterNameView: UIView {
     
     //MARK: - Properties
-    struct Constants {
+    private struct Constants {
         static let margin: CGFloat = 24
     }
     
     lazy var titleLabel: UILabel = {
         let title = UILabel()
-    
         title.text = "Sign up"
         title.font = UIFont.boldSystemFont(ofSize: 20)
         
@@ -70,7 +69,6 @@ class RegisterNameView: UIView {
     
     lazy var errorTextLabel: UILabel = {
         let errorLabel = UILabel()
-        
         errorLabel.text = ""
         errorLabel.textColor = .errorLabel
         errorLabel.font = UIFont(name: "Poppins", size: 18)
