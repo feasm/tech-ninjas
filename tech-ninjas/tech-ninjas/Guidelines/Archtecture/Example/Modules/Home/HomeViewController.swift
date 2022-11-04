@@ -69,10 +69,10 @@ class HomeViewController: UIViewController {
 
 }
 
-struct FeatureScreenViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewControllerPreview {
-            HomeViewController(coordinator: HomeFeatureCoordinator(window: UIWindow(frame: .zero)))
-        }
-    }
-}
+//struct FeatureScreenViewController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ViewControllerPreview {
+//            HomeViewController(coordinator: HomeFeatureCoordinator(window: UIWindow(frame: .zero)))
+//        }
+//    }
+//}

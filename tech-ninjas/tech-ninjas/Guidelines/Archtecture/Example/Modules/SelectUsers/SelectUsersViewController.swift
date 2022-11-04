@@ -98,12 +98,12 @@ extension SelectUsersViewController: TNUserSummaryViewDelegate {
     }
 }
 
-struct SelectUsersViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        let service = SelectUsersServiceMock()
-        let viewModel = SelectUsersViewModelImpl(service: service)
-        ViewControllerPreview {
-            SelectUsersViewController(viewModel: viewModel)
-        }
-    }
-}
+//struct SelectUsersViewController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let service = SelectUsersServiceMock()
+//        let viewModel = SelectUsersViewModelImpl(service: service)
+//        ViewControllerPreview {
+//            SelectUsersViewController(viewModel: viewModel)
+//        }
+//    }
+//}

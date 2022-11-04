@@ -8,6 +8,7 @@ target 'tech-ninjas' do
   pod 'TNUI', :path => './Development Pods/TNUI'
   pod 'TNCore', :path => './Development Pods/TNCore'
   pod 'TNAuthn', :path => './Development Pods/TNAuthn'
+#  pod 'TNCoordinator', :path => './Development Pods/TNCoordinator'
 
   # Pods for tech-ninjas
 

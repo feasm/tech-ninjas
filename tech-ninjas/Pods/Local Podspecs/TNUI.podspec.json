@@ -19,6 +19,7 @@
     "ios": "13.0"
   },
   "source_files": "TNUI/**/*",
+  "frameworks": "SwiftUI",
   "dependencies": {
     "TNCore": [
 

@@ -19,11 +19,12 @@
     "ios": "13.0"
   },
   "source_files": "TNAuthn/**/*",
+  "frameworks": "SwiftUI",
   "dependencies": {
-    "TNUI": [
+    "TNCore": [
 
     ],
-    "TNCore": [
+    "TNUI": [
 
     ],
     "SnapKit": [

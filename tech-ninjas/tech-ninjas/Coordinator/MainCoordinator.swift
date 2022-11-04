@@ -1,5 +1,5 @@
 //
-//  FeatureCoordinator.swift
+//  MainCoordinator.swift
 //  tech-ninjas
 //
 //  Created by Felipe Alexander Da Silva Melo on 04/09/22.
@@ -8,13 +8,10 @@
 import Foundation
 import UIKit
 
-protocol ProtocolCoordinator {
-    var currentViewController: UIViewController? { get }
-    var navigationController: UINavigationController? { get }
-    func start()
-}
+import TNCore
+import TNAuthn
 
-final class HomeFeatureCoordinator: ProtocolCoordinator {
+final class MainCoordinator: Coordinator {
     
     public var currentViewController: UIViewController?
     public var navigationController: UINavigationController?
@@ -25,26 +22,20 @@ final class HomeFeatureCoordinator: ProtocolCoordinator {
     }
     
     func start() {
-        let viewController = HomeViewController(coordinator: self)
-        navigationController = UINavigationController(rootViewController: viewController)
+//        let viewController = LoginViewController()
+        navigationController = UINavigationController()
         navigationController?.navigationBar.backgroundColor = .primaryBlue
         navigationController?.navigationBar.tintColor = .white
-//        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
-//        view.addSubview(navBar)
         
-        currentViewController = viewController
+//        currentViewController = viewController
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-    }
-    
-}
-
-extension HomeFeatureCoordinator: HomeCoordinator {
-    func showSelectUsers() {
-        let coordinator = SelectUsersCoordinator(navigationController: navigationController)
+        
+        let coordinator = LoginCoordinator(navigationController: navigationController)
         coordinator.start()
     }
+    
 }
 
 // SwiftLint - Ok
