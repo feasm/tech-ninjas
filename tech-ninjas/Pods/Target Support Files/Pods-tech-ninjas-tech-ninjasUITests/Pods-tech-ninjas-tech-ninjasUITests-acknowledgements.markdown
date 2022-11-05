@@ -24,7 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## TNAuthn
+## TNAuth
 
 Copyright (c) 2022 minattig <gustavo.minatti@gmail.com>
 

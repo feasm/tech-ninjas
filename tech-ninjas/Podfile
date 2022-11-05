@@ -7,8 +7,7 @@ target 'tech-ninjas' do
   pod 'SnapKit'
   pod 'TNUI', :path => './Development Pods/TNUI'
   pod 'TNCore', :path => './Development Pods/TNCore'
-  pod 'TNAuthn', :path => './Development Pods/TNAuthn'
-#  pod 'TNCoordinator', :path => './Development Pods/TNCoordinator'
+  pod 'TNAuth', :path => './Development Pods/TNAuth'
 
   # Pods for tech-ninjas
 

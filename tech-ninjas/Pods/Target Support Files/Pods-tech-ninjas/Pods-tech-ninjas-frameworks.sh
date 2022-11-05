@@ -177,13 +177,13 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TNAuthn/TNAuthn.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TNAuth/TNAuth.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TNCore/TNCore.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TNUI/TNUI.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TNAuthn/TNAuthn.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TNAuth/TNAuth.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TNCore/TNCore.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TNUI/TNUI.framework"
 fi

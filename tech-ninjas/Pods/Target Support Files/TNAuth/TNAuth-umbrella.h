@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double TNAuthnVersionNumber;
-FOUNDATION_EXPORT const unsigned char TNAuthnVersionString[];
+FOUNDATION_EXPORT double TNAuthVersionNumber;
+FOUNDATION_EXPORT const unsigned char TNAuthVersionString[];
 
