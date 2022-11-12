@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 import TNCore
-import TNAuthn
+import TNAuth
 
 final class MainCoordinator: Coordinator {
     
@@ -32,7 +32,8 @@ final class MainCoordinator: Coordinator {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
-        let coordinator = LoginCoordinator(navigationController: navigationController)
+//        let coordinator = LoginCoordinator(navigationController: navigationController)
+        let coordinator = NameInputCoordinator(navigationController: navigationController)
         coordinator.start()
     }
     

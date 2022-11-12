@@ -1,8 +1,8 @@
-// 
-//  RegisterNameViewModel.swift
+//
+//  NameInputViewModel.swift
 //  tech-ninjas
 //
-//  Created by Gustavo Minatti on 06/10/22.
+//  Created by Paulo Lazarini on 10/11/22.
 //
 
 import UIKit
@@ -10,16 +10,16 @@ import UIKit
 import TNCore
 import TNUI
 
-protocol RegisterNameViewModel {
+protocol NameInputViewModel {
     func getUsers()
 }
 
-final class RegisterNameViewModelImpl: RegisterNameViewModel {
+final class NameInputViewModelImpl: NameInputViewModel {
 
-    private let service: RegisterNameService
-    private var userModels = [RegisterNameModel]()
+    private let service: NameInputService
+    private var userModels = [NameInputModel]()
     
-    init(service: RegisterNameService) {
+    init(service: NameInputService) {
         self.service = service
     }
     
