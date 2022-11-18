@@ -12,15 +12,22 @@ import TNUI
 
 protocol LoginViewModel {
     func getUsers()
+    func showNameInput()
 }
 
 final class LoginViewModelImpl: LoginViewModel {
 
     private let service: LoginService
+    private let coordinator: TNAuthCoordinator
     private var userModels = [LoginModel]()
     
-    init(service: LoginService) {
+    init(service: LoginService, coordinator: TNAuthCoordinator) {
         self.service = service
+        self.coordinator = coordinator
+    }
+    
+    func showNameInput() {
+        coordinator.showNameInput()
     }
     
     func getUsers() {

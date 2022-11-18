@@ -22,7 +22,7 @@ public class TNQuestionAnswerView: UIView {
         return stack
     }()
     
-    lazy var answerButton: UIButton = {
+    lazy public var answerButton: UIButton = {
         let button = UIButton()
         button.setTitle(buttonName, for: .normal)
         button.setTitleColor(.primaryBlue, for: .normal)
@@ -74,15 +74,7 @@ extension TNQuestionAnswerView: ViewCoded {
             make.top.equalToSuperview()
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            
-            questionLabel.snp.makeConstraints { make in
-                make.top.equalToSuperview()
-                make.leading.equalToSuperview()
-            }
-            
-            answerButton.snp.makeConstraints { make in
-                make.top.equalToSuperview()
-            }
+            make.bottom.equalToSuperview()
             
             stackView.setCustomSpacing(3, after: questionLabel)
         }

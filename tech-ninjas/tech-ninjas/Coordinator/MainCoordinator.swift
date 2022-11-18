@@ -32,8 +32,7 @@ final class MainCoordinator: Coordinator {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
-//        let coordinator = LoginCoordinator(navigationController: navigationController)
-        let coordinator = NameInputCoordinator(navigationController: navigationController)
+        let coordinator = TNAuthCoordinator(navigationController: navigationController)
         coordinator.start()
     }
     

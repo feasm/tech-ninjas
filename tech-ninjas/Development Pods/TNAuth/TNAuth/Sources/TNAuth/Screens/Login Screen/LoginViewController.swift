@@ -11,7 +11,7 @@ import SwiftUI
 import TNCore
 import TNUI
 
-class LoginViewController: UIViewController {
+public class LoginViewController: UIViewController {
     
     //MARK: - Properties
     private var viewModel: LoginViewModel
@@ -30,16 +30,17 @@ class LoginViewController: UIViewController {
     }
 
     //MARK: - Life Cycle
-    override func loadView() {
+    public override func loadView() {
         super.loadView()
         view = contentView
 //        view.backgroundColor = .white
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         setup()
+        configKeyboard()
     }
     
     //MARK: - Methods
@@ -48,21 +49,35 @@ class LoginViewController: UIViewController {
          contentView.searchTextField.addTarget(self, action: #selector(onUpdateSearchText), for: .editingChanged)
          contentView.selectButton.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
          */
+        
+//        contentView.signInButton.addTarget(self, action: #selector(nextScreen), for: .touchUpInside)
+        contentView.signUpView.answerButton.addTarget(self, action: #selector(nextScreen), for: .touchUpInside)
+    }
+    
+    @objc func nextScreen() {
+        viewModel.showNameInput()
     }
     
     private func setup() {
         setupBindings()
     }
 
+    //MARK: - Keyboard
+    
+    func configKeyboard() {
+        self.showKeyboardWhenTappedAround()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
 }
 
 //MARK: - Preview
-struct LoginViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        let service = LoginServiceMock()
-        let viewModel = LoginViewModelImpl(service: service)
-        ViewControllerPreview {
-        LoginViewController(viewModel: viewModel)
-        }
-    }
-}
+//struct LoginViewController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let service = LoginServiceMock()
+//        let viewModel = LoginViewModelImpl(service: service, coordinator: )
+//        ViewControllerPreview {
+//        LoginViewController(viewModel: viewModel)
+//        }
+//    }
+//}

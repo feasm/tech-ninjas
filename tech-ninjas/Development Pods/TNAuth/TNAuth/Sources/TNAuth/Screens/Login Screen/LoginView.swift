@@ -21,11 +21,12 @@ class LoginView: UIView {
     }
     
     //MARK: - Properties
+    
     lazy var titleAppLabel: UILabel = {
         let label = UILabel()
         label.text = "Tech Ninjas"
         label.font = UIFont.boldSystemFont(ofSize: 32)
-//        label.font = UIFont(name: "Poppins", size: 32)
+        //        label.font = UIFont(name: "Poppins", size: 32)
         
         return label
     }()
@@ -106,19 +107,19 @@ class LoginView: UIView {
         return button
     }()
     
-    lazy var signUpView: TNQuestionAnswerView = {
+    lazy public var signUpView: TNQuestionAnswerView = {
         let view = TNQuestionAnswerView(question: "Don't have an account?", buttonName: "Sign Up")
-
+        
         return view
     }()
     
-//    lazy var hiddenPasswordButton: UIButton = {
-//        let button = UIButton()
-//        let imageButton = UIImage(named: "hidden-icon")
-//        button.setImage(imageButton, for: .normal)
-//
-//        return button
-//    }()
+    //    lazy var hiddenPasswordButton: UIButton = {
+    //        let button = UIButton()
+    //        let imageButton = UIImage(named: "hidden-icon")
+    //        button.setImage(imageButton, for: .normal)
+    //
+    //        return button
+    //    }()
     
     //MARK: - Init
     init() {
@@ -131,12 +132,11 @@ class LoginView: UIView {
     }
     
     //MARK: - Actions
-    @objc func goToRegisterAccount() {
-//        let registerVC = RegistrationViewController()
-//        navigationController?.pushViewController(registerVC, animated: true)
-        print("Sign Up works")
-    }
-    
+//    @objc func goToRegisterAccount() {
+//        coordinator?.start()
+//        print("Sign Up works")
+//    }
+//
 }
 
 //MARK: - ViewCode
@@ -240,3 +240,4 @@ struct LoginView_Previews: PreviewProvider {
         }
     }
 }
+

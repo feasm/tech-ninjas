@@ -14,7 +14,7 @@ import TNUI
 
 class TelephoneInputView: UIView {
     
-    var coordinator:NameInputCoordinator?
+    var coordinator:TNAuthCoordinator?
     
     lazy var titleLabel:UILabel = {
         let title = UILabel()
@@ -74,20 +74,22 @@ class TelephoneInputView: UIView {
     lazy var registerTextField:UITextField = {
         let textfield = UITextField()
         
+        textfield.keyboardType = .phonePad
         textfield.placeholder = "(47) 99999-9999"
         textfield.backgroundColor = #colorLiteral(red: 0.8993844697, green: 0.8993844697, blue: 0.8993844697, alpha: 1)
-//        textfield.setLeftPaddingPoints(15)
-//        textfield.setRightPaddingPoints(10)
-//        textfield.setRounded()
+        textfield.setLeftPaddingPoints(15)
+        textfield.setRightPaddingPoints(10)
+        textfield.setRounded()
         textfield.adjustsFontSizeToFitWidth = true
     
         
         return textfield
     }()
     
-    lazy var errorLabel:UILabel = {
+    lazy var errorLabelTelephoneInput:UILabel = {
         let error = UILabel()
-
+        
+        error.isHidden = true
         error.text = "This field can't be blank."
         error.textColor = .red
         
@@ -100,7 +102,7 @@ class TelephoneInputView: UIView {
         
         button.backgroundColor = #colorLiteral(red: 0.2205340872, green: 0.3245643842, blue: 1, alpha: 1)
         button.setTitle("Next", for: .normal)
-//        button.setRounded()
+        button.setRounded()
 
         return button
     }()
@@ -128,7 +130,7 @@ extension TelephoneInputView:ViewCoded {
         
         stackView.addArrangedSubview(userInfoLabel)
         stackView.addArrangedSubview(registerTextField)
-        stackView.addArrangedSubview(errorLabel)
+        stackView.addArrangedSubview(errorLabelTelephoneInput)
     }
     
     func setupConstraints() {
@@ -155,7 +157,7 @@ extension TelephoneInputView:ViewCoded {
                 make.height.equalTo(44)
             }
             
-            errorLabel.snp.makeConstraints { make in
+            errorLabelTelephoneInput.snp.makeConstraints { make in
                 make.top.equalTo(registerTextField.snp.bottom).offset(12)
             }
         }

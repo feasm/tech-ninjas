@@ -29,7 +29,6 @@
 		38B9D58E94D9C1CECD7E381C64A2329D /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EE8343B4F64CFDE73F65CEF14A13F /* UILayoutSupport+Extensions.swift */; };
 		3CCA127E70C5EE930255999BC2DB8758 /* TNAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D253283D32636BEBDBE01537E4F589 /* TNAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42B6ACFCF650183030867CB3EF345E95 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D51A2BEEF78C262C4B3F3798D1702 /* ConstraintMakerFinalizable.swift */; };
-		44DCD82F8A7BAB07C1474B1E99950903 /* TelephoneInputCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A5A075AA5AAAD4E922555E4BBF01FF /* TelephoneInputCoordinator.swift */; };
 		4A14F6B9ADC5B164B18E5D148A56693A /* ViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C53C59E02861826B1C027FE306E8D0 /* ViewPreview.swift */; };
 		4BAD99B7394E225CEDBF94B8100BCC7F /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30E74C9EDB065D2E76B3EDCCB6E2153 /* ConstraintRelation.swift */; };
 		4DA72FD7F1FB2C0449EDEF4B8A579807 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096225ED146E16EC168C99FEDD215B5 /* ConstraintPriorityTarget.swift */; };
@@ -83,10 +82,9 @@
 		BD47CB74CD9B2B4D2D942C9B65748DFB /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 143498449916D71708A8AF2F96E7320A /* SnapKit-dummy.m */; };
 		BF3501094B63A9689DC9C079BF730B55 /* TNColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086F2D840B96787F0DB85511EAD2C7EA /* TNColors.swift */; };
 		C076F33D3E09F6C21CF3C304469E7A00 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4381033395A7A57F09E396115FCF6FCA /* LoginModel.swift */; };
-		C32464BD438A54C5E2D3CF3066DEB3F2 /* NameInputCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A7B1DE42AB5272995E7B8F6790270 /* NameInputCoordinator.swift */; };
 		C4B7DD4030C900437A2570B3E883FDCD /* NameInputService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55634C5CF7D4C26B95A529B1B01E2AF /* NameInputService.swift */; };
 		C769ADA78DB07B1515F03DDC951269DA /* TNUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B1AC0DC220F2D2797483D0180AF78 /* TNUI-dummy.m */; };
-		C77248D4D91AB1DAA2B81A6EC9025984 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DA6DC45034EE413C881B4ECCCF029D /* LoginCoordinator.swift */; };
+		C77248D4D91AB1DAA2B81A6EC9025984 /* TNAuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DA6DC45034EE413C881B4ECCCF029D /* TNAuthCoordinator.swift */; };
 		CB357D4EA57FFB35866030687F254A6B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B127575D4229F46627109EFF33BE166 /* LoginViewModel.swift */; };
 		CF0F9CF4C757EE92EF4319D6ED697C11 /* TNCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32DE4298B717336C77FC79122598AC3E /* TNCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1457EF5DF76686C1BEA5A886C5CF9EC /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE496048B0EC4C452BA9548F961EB960 /* UIViewController+extensions.swift */; };
@@ -243,7 +241,7 @@
 		3AF34962F54DAA8DEB0A1D7D4F3FC09A /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Sources/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		3C32FE3490220B164D360B800626B871 /* Pods-tech-ninjas */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-tech-ninjas"; path = Pods_tech_ninjas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		412D51A2BEEF78C262C4B3F3798D1702 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Sources/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
-		42DA6DC45034EE413C881B4ECCCF029D /* LoginCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		42DA6DC45034EE413C881B4ECCCF029D /* TNAuthCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TNAuthCoordinator.swift; sourceTree = "<group>"; };
 		4376C1F5FD0FE2378660FB7586CDC592 /* TNAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TNAuth.modulemap; sourceTree = "<group>"; };
 		4381033395A7A57F09E396115FCF6FCA /* LoginModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		443DF3F3E0244D341CDEACF9A2164533 /* TNPrimaryButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TNPrimaryButton.swift; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 		5E60E9C1139576E6E8A92DD0A5C97A08 /* Pods-tech-ninjas-tech-ninjasUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tech-ninjas-tech-ninjasUITests-Info.plist"; sourceTree = "<group>"; };
 		5EA6397734640F5DECD0C1ECFC30F81D /* UIView + extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView + extensions.swift"; sourceTree = "<group>"; };
 		5F2DCDFF2011C08759407B4E2038CA11 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Sources/ConstraintAttributes.swift; sourceTree = "<group>"; };
-		63A5A075AA5AAAD4E922555E4BBF01FF /* TelephoneInputCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TelephoneInputCoordinator.swift; sourceTree = "<group>"; };
 		63D253283D32636BEBDBE01537E4F589 /* TNAuth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TNAuth-umbrella.h"; sourceTree = "<group>"; };
 		660393EF0EDBECC8E2B4E20DD01A2A5A /* Pods-tech-ninjasTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-tech-ninjasTests"; path = Pods_tech_ninjasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7CB557DBFB99BAE2EDE79A5584CA2D /* TNAuth-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TNAuth-Info.plist"; sourceTree = "<group>"; };
@@ -288,7 +285,6 @@
 		828B1AC0DC220F2D2797483D0180AF78 /* TNUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TNUI-dummy.m"; sourceTree = "<group>"; };
 		8422A4B166F4C0BD993A6443AD6981D2 /* TNCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TNCore.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		847AEFC39E039BEF28BF7BCDBDC78555 /* ViewCoded.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewCoded.swift; sourceTree = "<group>"; };
-		895A7B1DE42AB5272995E7B8F6790270 /* NameInputCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NameInputCoordinator.swift; sourceTree = "<group>"; };
 		8D0C19BFE2687BB75F3793899E86887E /* TNAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TNAuth-prefix.pch"; sourceTree = "<group>"; };
 		932076048BB79360F50A76C2C738DFC8 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		940B0FA2CDE32B59C9B542ABBC5C5455 /* TNQuestionAnswerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TNQuestionAnswerView.swift; sourceTree = "<group>"; };
@@ -446,7 +442,6 @@
 		34CA141B297D493D1A16314222BC80CD /* Login Screen */ = {
 			isa = PBXGroup;
 			children = (
-				42DA6DC45034EE413C881B4ECCCF029D /* LoginCoordinator.swift */,
 				4381033395A7A57F09E396115FCF6FCA /* LoginModel.swift */,
 				1C164C2360749A43F42401960DE29A99 /* LoginService.swift */,
 				1EC1493C443141A720A602308753E385 /* LoginView.swift */,
@@ -554,6 +549,7 @@
 		6A82AEA5AFEBE9C25E434A16DAB88550 /* TNAuth */ = {
 			isa = PBXGroup;
 			children = (
+				42DA6DC45034EE413C881B4ECCCF029D /* TNAuthCoordinator.swift */,
 				34CA141B297D493D1A16314222BC80CD /* Login Screen */,
 				C88B3E96A10E5A209B8FD898ABA3510B /* NameInput */,
 				90072A7FA18334A9E8E67A38EEE05683 /* TelephoneInput */,
@@ -609,7 +605,6 @@
 		90072A7FA18334A9E8E67A38EEE05683 /* TelephoneInput */ = {
 			isa = PBXGroup;
 			children = (
-				63A5A075AA5AAAD4E922555E4BBF01FF /* TelephoneInputCoordinator.swift */,
 				0CA677EEB0AFA60D43CDC563174B3F02 /* TelephoneInputModel.swift */,
 				B5074F1F9BFFABD359F216AE62B2F3DC /* TelephoneInputService.swift */,
 				BA983EE1EF58A0AF9DBD20235404FA5B /* TelephoneInputView.swift */,
@@ -691,7 +686,6 @@
 		C88B3E96A10E5A209B8FD898ABA3510B /* NameInput */ = {
 			isa = PBXGroup;
 			children = (
-				895A7B1DE42AB5272995E7B8F6790270 /* NameInputCoordinator.swift */,
 				A3B9F305C8F4B503DBE56A4D7ED04884 /* NameInputModel.swift */,
 				C55634C5CF7D4C26B95A529B1B01E2AF /* NameInputService.swift */,
 				E51958B1058EDBA1C779647453EEDBF4 /* NameInputView.swift */,
@@ -1189,19 +1183,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C77248D4D91AB1DAA2B81A6EC9025984 /* LoginCoordinator.swift in Sources */,
+				C77248D4D91AB1DAA2B81A6EC9025984 /* TNAuthCoordinator.swift in Sources */,
 				C076F33D3E09F6C21CF3C304469E7A00 /* LoginModel.swift in Sources */,
 				FE6FA32E4C6BED46460EF0A80D1599B4 /* LoginService.swift in Sources */,
 				94935CAB8F6BECBC6CEF46148D7DEA66 /* LoginView.swift in Sources */,
 				25A105C89D185E80CE44FC914A9632D1 /* LoginViewController.swift in Sources */,
 				CB357D4EA57FFB35866030687F254A6B /* LoginViewModel.swift in Sources */,
-				C32464BD438A54C5E2D3CF3066DEB3F2 /* NameInputCoordinator.swift in Sources */,
 				764E675476A1B9F40E34D110EC149CE7 /* NameInputModel.swift in Sources */,
 				C4B7DD4030C900437A2570B3E883FDCD /* NameInputService.swift in Sources */,
 				F48DC49B1B3451BDFB08EB2E0BC5487C /* NameInputView.swift in Sources */,
 				A13653D1151EC9931504BC9BE114E08F /* NameInputViewController.swift in Sources */,
 				F6381C5713E16DA609E6E95A74CEDC43 /* NameInputViewModel.swift in Sources */,
-				44DCD82F8A7BAB07C1474B1E99950903 /* TelephoneInputCoordinator.swift in Sources */,
 				71260668724DB6101984177FBFB2A370 /* TelephoneInputModel.swift in Sources */,
 				DD7C679A0F2A34339EA6CA8CF87A0E85 /* TelephoneInputService.swift in Sources */,
 				2866E70E392571C969AB972C92322FCE /* TelephoneInputView.swift in Sources */,

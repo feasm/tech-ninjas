@@ -29,15 +29,9 @@ class NameInputView: UIView {
         
         let buttonImage = UIImage(systemName: "return")
         button.setImage(buttonImage, for: .normal)
-        button.addTarget(self, action: #selector(dismissScreen), for: .touchUpInside)
              
         return button
     }()
-    
-    @objc func dismissScreen(sender: UIButton!) {
-
-        print("b")
-    }
 
     lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -72,6 +66,7 @@ class NameInputView: UIView {
     lazy var registerTextField:UITextField = {
         let textfield = UITextField()
         
+        textfield.keyboardType = .default
         textfield.placeholder = "James Harrid"
         textfield.backgroundColor = #colorLiteral(red: 0.8993844697, green: 0.8993844697, blue: 0.8993844697, alpha: 1)
         textfield.setLeftPaddingPoints(15)
@@ -83,9 +78,10 @@ class NameInputView: UIView {
         return textfield
     }()
     
-    lazy var errorLabel:UILabel = {
+    lazy var errorLabelInputName:UILabel = {
         let error = UILabel()
-
+        
+        error.isHidden = true
         error.text = "This field can't be blank."
         error.textColor = .red
         
@@ -124,7 +120,7 @@ extension NameInputView: ViewCoded {
         
         stackView.addArrangedSubview(userInfoLabel)
         stackView.addArrangedSubview(registerTextField)
-        stackView.addArrangedSubview(errorLabel)
+        stackView.addArrangedSubview(errorLabelInputName)
     }
     
     func setupConstraints() {
@@ -151,7 +147,7 @@ extension NameInputView: ViewCoded {
                 make.height.equalTo(44)
             }
             
-            errorLabel.snp.makeConstraints { make in
+            errorLabelInputName.snp.makeConstraints { make in
                 make.top.equalTo(registerTextField.snp.bottom).offset(12)
             }
         }
