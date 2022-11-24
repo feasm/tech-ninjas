@@ -14,6 +14,17 @@ import TNUI
 
 class NameInputView: UIView {
     
+    lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        
+        return scrollView
+    }()
+    
+    lazy var contentView: UIView = {
+        let view = UIView()
+        
+        return view
+    }()
     
     lazy var titleLabel:UILabel = {
         let title = UILabel()
@@ -113,6 +124,11 @@ class NameInputView: UIView {
 extension NameInputView: ViewCoded {
     
     func buildViewHierarchy() {
+        
+        addSubview(scrollView)
+        
+        scrollView.addSubview(contentView)
+        
         addSubview(titleLabel)
         addSubview(backButton)
         addSubview(stackView)
@@ -124,10 +140,28 @@ extension NameInputView: ViewCoded {
     }
     
     func setupConstraints() {
+        scrollView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview()
+            
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        
+        contentView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        
         titleLabel.snp.makeConstraints { make in
             make.topMargin.equalTo(13)
             make.centerX.equalToSuperview()
         }
+        
         backButton.snp.makeConstraints { make in
             make.topMargin.equalTo(20)
             make.leading.equalToSuperview().inset(24)
@@ -154,6 +188,7 @@ extension NameInputView: ViewCoded {
         
         
         nextButton.snp.makeConstraints { make in
+            
             make.bottom.equalToSuperview().inset(24)
             make.trailing.equalToSuperview().inset(24)
             make.leading.equalToSuperview().inset(24)

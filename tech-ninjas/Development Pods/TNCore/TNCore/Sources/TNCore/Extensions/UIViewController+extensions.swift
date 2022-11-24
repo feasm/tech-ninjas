@@ -29,12 +29,3 @@ public extension UIViewController {
     }
 }
 
-public extension UIViewController {
-    @objc func keyboardWillShow(sender: NSNotification) {
-        view.frame.origin.y = view.frame.origin.y - 200
-    }
-
-    @objc func keyboardWillHide(notification: NSNotification) {
-        view.frame.origin.y = 0
-    }
-}

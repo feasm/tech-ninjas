@@ -13,7 +13,9 @@ import TNUI
 
 protocol TelephoneInputViewModel {
     func getUsers()
-    
+    func showNameInput()
+    func maskMobileNumber(_ number:String) -> String
+    func validateTelephoneInput(number: String)
 }
 
 final class TelephoneInputViewModelImpl: TelephoneInputViewModel {
@@ -38,6 +40,14 @@ final class TelephoneInputViewModelImpl: TelephoneInputViewModel {
             case .failure(let error):
                 print(error.localizedDescription)
             }
+        }
+    }
+    
+    func validateTelephoneInput(number: String) {
+        if number.count == 14{
+            print("deu certo")
+        }else {
+            print(number)
         }
     }
     

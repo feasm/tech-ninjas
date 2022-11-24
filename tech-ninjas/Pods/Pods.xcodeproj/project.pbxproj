@@ -92,6 +92,7 @@
 		D5FE8FDE2D1B81E81AA03FC9E2993B61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7C7CBF4366B196F4F8B133C8319AB1 /* Foundation.framework */; };
 		DD7C679A0F2A34339EA6CA8CF87A0E85 /* TelephoneInputService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5074F1F9BFFABD359F216AE62B2F3DC /* TelephoneInputService.swift */; };
 		DE8E378706ACDB1CEB19B8E3BFF9F4EC /* UIView + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA6397734640F5DECD0C1ECFC30F81D /* UIView + extensions.swift */; };
+		E05D76C0292EEFD700676C43 /* Keyboard+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D76BF292EEFD700676C43 /* Keyboard+extensions.swift */; };
 		E98DC8FB2578E76A812E0C94BA10E1B1 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DFD8FEE78807F86F0544749C80450 /* ConstraintDirectionalInsets.swift */; };
 		EA02A9AA4A884C383F6BFE861BD12FD1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BA16C7D7FB1AFDE00AE479A3FA32C3 /* Coordinator.swift */; };
 		EAB24E8C4AB7C8F27413BD1A6446E637 /* TNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4704427840D6A1ECF5F4AC9DC8E723A0 /* TNTextField.swift */; };
@@ -339,6 +340,7 @@
 		DDFBBDB0D11D15EA3C0D640EF407F700 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Sources/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
 		DE7A13735AC13B51909B79311DA41665 /* TNCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TNCore.modulemap; sourceTree = "<group>"; };
 		E04B678C00268C9CF7E410145D6F78AA /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Sources/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
+		E05D76BF292EEFD700676C43 /* Keyboard+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+extensions.swift"; sourceTree = "<group>"; };
 		E1E28B456CC27C368EDEDFA228B4F92A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E30E74C9EDB065D2E76B3EDCCB6E2153 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Sources/ConstraintRelation.swift; sourceTree = "<group>"; };
 		E51958B1058EDBA1C779647453EEDBF4 /* NameInputView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NameInputView.swift; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 				FF896C29E73C6F4849232D493E13E837 /* UITextField + extensions.swift */,
 				5EA6397734640F5DECD0C1ECFC30F81D /* UIView + extensions.swift */,
 				CE496048B0EC4C452BA9548F961EB960 /* UIViewController+extensions.swift */,
+				E05D76BF292EEFD700676C43 /* Keyboard+extensions.swift */,
 			);
 			name = Extensions;
 			path = TNCore/Sources/TNCore/Extensions;
@@ -1213,6 +1216,7 @@
 				F0B14190ADA35D3DEEBB69ABC20D5E40 /* UISwitch+extensions.swift in Sources */,
 				65FF39242F3963D745B99B20384E0834 /* UITextField + extensions.swift in Sources */,
 				DE8E378706ACDB1CEB19B8E3BFF9F4EC /* UIView + extensions.swift in Sources */,
+				E05D76C0292EEFD700676C43 /* Keyboard+extensions.swift in Sources */,
 				D1457EF5DF76686C1BEA5A886C5CF9EC /* UIViewController+extensions.swift in Sources */,
 				73A7E24A26297C263B07C0FAE13A97CE /* ViewCoded.swift in Sources */,
 			);
@@ -1556,7 +1560,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
@@ -1619,7 +1623,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;

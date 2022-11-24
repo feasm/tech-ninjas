@@ -14,13 +14,13 @@ import TNUI
 class TelephoneInputViewController: UIViewController{
     
     //MARK: - Properties
-    private var viewModel: TelephoneInputViewModelImpl
+    private var viewModel: TelephoneInputViewModel
     lazy private var contentView: TelephoneInputView = {
         TelephoneInputView()
     }()
     
     //MARK: - Init
-    init(viewModel: TelephoneInputViewModelImpl) {
+    init(viewModel: TelephoneInputViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -41,15 +41,10 @@ class TelephoneInputViewController: UIViewController{
         setup()
         configKeyboard()
         
-        
     }
     
     //MARK: - Methods
     private func setupBindings() {
-        /*
-         contentView.searchTextField.addTarget(self, action: #selector(onUpdateSearchText), for: .editingChanged)
-         contentView.selectButton.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
-         */
         contentView.backButton.addTarget(self, action: #selector(dismissScreen), for: .touchUpInside)
         contentView.nextButton.addTarget(self, action: #selector(errorLabelHidden), for: .touchUpInside)
         contentView.registerTextField.addTarget(self, action: #selector(mobileNumMask), for: .allEditingEvents)
@@ -61,25 +56,74 @@ class TelephoneInputViewController: UIViewController{
     
     @objc func errorLabelHidden() {
         errorLabel()
+        guard let number = contentView.registerTextField.text else { return }
+        viewModel.validateTelephoneInput(number: number)
     }
     
     @objc func mobileNumMask() {
         let number = contentView.registerTextField.text!
         contentView.registerTextField.text = viewModel.maskMobileNumber(number)
+
     }
     
     private func setup() {
         setupBindings()
     }
     
-    
     //MARK: - Keyboard
     
     func configKeyboard() {
         self.showKeyboardWhenTappedAround()
         self.hideKeyboardWhenTappedAround()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(handle(keyboardShowNotification:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(handle(keyboardHideNotification:)),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
     }
     
+    @objc func handle(keyboardShowNotification notification: Notification){
+        // 1
+        print("Keyboard show notification")
+        
+        // 2
+        if let userInfo = notification.userInfo,
+            // 3
+            let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+            print(keyboardRectangle.height)
+            moveUp(keyboardHeight: Int(keyboardRectangle.height))
+        }
+    }
+    
+    func moveUp(keyboardHeight: Int) {
+        contentView.nextButton.snp.updateConstraints { make in
+            make.bottom.equalToSuperview().inset(keyboardHeight + 24)
+        }
+    }
+    
+    @objc func handle(keyboardHideNotification notification: Notification){
+        // 1
+        print("Keyboard show notification")
+        
+        // 2
+        if let userInfo = notification.userInfo,
+            // 3
+            let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+            print(keyboardRectangle.height)
+            moveDown()
+        }
+    }
+    
+    func moveDown() {
+        contentView.nextButton.snp.updateConstraints { make in
+            make.bottom.equalToSuperview().inset(24)
+        }
+    }
     
     //MARK: - Validation
     
